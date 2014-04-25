@@ -24,48 +24,7 @@
 // -----------------------------------------------------------------------
 #pragma mark - HelloWorldScene
 // -----------------------------------------------------------------------
-/*
-@interface CCMoveToX : CCActionInterval
-{
-  float _endPosition;
-  float _startPos;
-  void (^block)(void);
-}
-@end
 
-@implementation CCMoveToX
-
--(id) initWithDuration: (CCTime) t positionX: (float) p callback:(void(^)(void))callback
-{
-  if( (self=[super initWithDuration: t]) ) {
-    _endPosition = p;
-    block = callback;
-  }
-  return self;
-}
-@end
-
-
-@interface CCMoveToY : CCActionInterval
-{
-  float _endPosition;
-  float _startPos;
-  void (^block)(void);
-}
-@end
-
-@implementation CCMoveToY
-
--(id) initWithDuration: (CCTime) t positionY: (float) p callback:(void(^)(void))callback
-{
-  if( (self=[super initWithDuration: t]) ) {
-    _endPosition = p;
-    block = [callback copy];
-  }
-  return self;
-}
-@end
-*/
 @implementation HelloWorldScene
 {
   NSMutableArray *_characterList;

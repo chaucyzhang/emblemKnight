@@ -43,6 +43,7 @@
     // Apple recommend assigning self with supers return value
     self = [super init];
     if (!self) return(nil);
+<<<<<<< HEAD
   
 
 //  CCSprite *logo = [CCSprite spriteWithImageNamed:@"Langrisser2.png"];
@@ -63,6 +64,8 @@
 //  _startLabel=label;
 //  [label runAction:repeatingAnimation];
 //  [self loadOP];
+=======
+>>>>>>> FETCH_HEAD
 	return self;
 }
 
