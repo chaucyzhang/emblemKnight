@@ -38,7 +38,7 @@
   
   for(int i = 0; i <= 1; i++)
   {
-    CCSpriteFrame *frame = [CCSpriteFrame frameWithTexture:walkingSheet.texture rectInPixels:CGRectMake(spritePoint.x*spriteWidth, spriteHeight*spritePoint.y+spriteHeight*i, spriteWidth, spriteHeight) rotated:NO offset:ccp(0,0) originalSize:CGSizeMake(spriteWidth, spriteHeight)];
+    CCSpriteFrame *frame = [CCSpriteFrame frameWithTexture:walkingSheet.texture rectInPixels:CGRectMake((spritePoint.x-1)*spriteWidth, spriteHeight*(spritePoint.y-1)+spriteHeight*i, spriteWidth, spriteHeight) rotated:NO offset:ccp(0,0) originalSize:CGSizeMake(spriteWidth, spriteHeight)];
     [walkAnimFrames addObject:frame];
     
   }

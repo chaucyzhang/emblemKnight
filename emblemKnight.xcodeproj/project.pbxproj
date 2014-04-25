@@ -11,7 +11,7 @@
 		C32367131904BBAD00E53297 /* gameConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C32367121904BBAD00E53297 /* gameConstants.m */; };
 		C32367161904D01500E53297 /* MathUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C32367151904D01500E53297 /* MathUtil.m */; };
 		C32367191905D4AD00E53297 /* Stage1.png in Resources */ = {isa = PBXBuildFile; fileRef = C32367181905D4AD00E53297 /* Stage1.png */; };
-		C323672A1906244100E53297 /* leon_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C323671F1906244100E53297 /* leon_icon.gif */; };
+		C323672A1906244100E53297 /* 里昂_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C323671F1906244100E53297 /* 里昂_icon.gif */; };
 		C323672B1906244100E53297 /* jessica_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367201906244100E53297 /* jessica_icon.gif */; };
 		C323672C1906244100E53297 /* lana_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367211906244100E53297 /* lana_icon.gif */; };
 		C323672D1906244100E53297 /* riana_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367221906244100E53297 /* riana_icon.gif */; };
@@ -20,13 +20,15 @@
 		C32367301906244100E53297 /* aaron_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367251906244100E53297 /* aaron_icon.gif */; };
 		C32367311906244100E53297 /* shelly_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367261906244100E53297 /* shelly_icon.gif */; };
 		C32367321906244100E53297 /* scott_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367271906244100E53297 /* scott_icon.gif */; };
-		C32367331906244100E53297 /* hain_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367281906244100E53297 /* hain_icon.gif */; };
+		C32367331906244100E53297 /* 海因_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367281906244100E53297 /* 海因_icon.gif */; };
 		C32367341906244100E53297 /* 艾尔文_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367291906244100E53297 /* 艾尔文_icon.gif */; };
 		C32367381906435D00E53297 /* conversationBox.png in Resources */ = {isa = PBXBuildFile; fileRef = C32367361906435D00E53297 /* conversationBox.png */; };
 		C32367391906435D00E53297 /* conversationNameBox.png in Resources */ = {isa = PBXBuildFile; fileRef = C32367371906435D00E53297 /* conversationNameBox.png */; };
 		C323673B1906593100E53297 /* KnightsErrant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C323673A1906593100E53297 /* KnightsErrant.mp3 */; };
 		C323673D19065C3600E53297 /* openning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C323673C19065C3600E53297 /* openning.mp3 */; };
 		C323675F1909023D00E53297 /* conversations.plist in Resources */ = {isa = PBXBuildFile; fileRef = C323675E1909023D00E53297 /* conversations.plist */; };
+		C3236767190A183B00E53297 /* Langrisser2Opening.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3236766190A183A00E53297 /* Langrisser2Opening.mp4 */; };
+		C323677F190A2B6700E53297 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C323677E190A2B6700E53297 /* MediaPlayer.framework */; };
 		C3A07B15190493AF00C99426 /* Langrisser2.png in Resources */ = {isa = PBXBuildFile; fileRef = C3A07B14190493AF00C99426 /* Langrisser2.png */; };
 		C3CF46AF19048702003AB73C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CF46AE19048702003AB73C /* QuartzCore.framework */; };
 		C3CF46B119048702003AB73C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CF46B019048702003AB73C /* OpenGLES.framework */; };
@@ -254,7 +256,7 @@
 		C32367141904D01500E53297 /* MathUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathUtil.h; path = Classes/MathUtil.h; sourceTree = "<group>"; };
 		C32367151904D01500E53297 /* MathUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathUtil.m; path = Classes/MathUtil.m; sourceTree = "<group>"; };
 		C32367181905D4AD00E53297 /* Stage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stage1.png; path = Resources/StageMaps/Stage1.png; sourceTree = "<group>"; };
-		C323671F1906244100E53297 /* leon_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = leon_icon.gif; path = Resources/AvatarIcons/leon_icon.gif; sourceTree = "<group>"; };
+		C323671F1906244100E53297 /* 里昂_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "里昂_icon.gif"; path = "Resources/AvatarIcons/里昂_icon.gif"; sourceTree = "<group>"; };
 		C32367201906244100E53297 /* jessica_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = jessica_icon.gif; path = Resources/AvatarIcons/jessica_icon.gif; sourceTree = "<group>"; };
 		C32367211906244100E53297 /* lana_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = lana_icon.gif; path = Resources/AvatarIcons/lana_icon.gif; sourceTree = "<group>"; };
 		C32367221906244100E53297 /* riana_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = riana_icon.gif; path = Resources/AvatarIcons/riana_icon.gif; sourceTree = "<group>"; };
@@ -263,13 +265,15 @@
 		C32367251906244100E53297 /* aaron_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = aaron_icon.gif; path = Resources/AvatarIcons/aaron_icon.gif; sourceTree = "<group>"; };
 		C32367261906244100E53297 /* shelly_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = shelly_icon.gif; path = Resources/AvatarIcons/shelly_icon.gif; sourceTree = "<group>"; };
 		C32367271906244100E53297 /* scott_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = scott_icon.gif; path = Resources/AvatarIcons/scott_icon.gif; sourceTree = "<group>"; };
-		C32367281906244100E53297 /* hain_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = hain_icon.gif; path = Resources/AvatarIcons/hain_icon.gif; sourceTree = "<group>"; };
+		C32367281906244100E53297 /* 海因_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "海因_icon.gif"; path = "Resources/AvatarIcons/海因_icon.gif"; sourceTree = "<group>"; };
 		C32367291906244100E53297 /* 艾尔文_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "艾尔文_icon.gif"; path = "Resources/AvatarIcons/艾尔文_icon.gif"; sourceTree = "<group>"; };
 		C32367361906435D00E53297 /* conversationBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = conversationBox.png; path = Resources/widgets/conversationBox.png; sourceTree = "<group>"; };
 		C32367371906435D00E53297 /* conversationNameBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = conversationNameBox.png; path = Resources/widgets/conversationNameBox.png; sourceTree = "<group>"; };
 		C323673A1906593100E53297 /* KnightsErrant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = KnightsErrant.mp3; path = Resources/BGMs/KnightsErrant.mp3; sourceTree = "<group>"; };
 		C323673C19065C3600E53297 /* openning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = openning.mp3; path = Resources/BGMs/openning.mp3; sourceTree = "<group>"; };
 		C323675E1909023D00E53297 /* conversations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = conversations.plist; path = Resources/conversationTextPlists/conversations.plist; sourceTree = "<group>"; };
+		C3236766190A183A00E53297 /* Langrisser2Opening.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Langrisser2Opening.mp4; path = Resources/Langrisser2Opening.mp4; sourceTree = "<group>"; };
+		C323677E190A2B6700E53297 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		C3A07B14190493AF00C99426 /* Langrisser2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Langrisser2.png; path = Resources/sprites/Langrisser2.png; sourceTree = "<group>"; };
 		C3CF46AB19048702003AB73C /* emblemKnight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emblemKnight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CF46AE19048702003AB73C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -707,6 +711,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C323677F190A2B6700E53297 /* MediaPlayer.framework in Frameworks */,
 				C3CF46C519048702003AB73C /* libObjectiveChipmunk.a in Frameworks */,
 				C3CF46B319048702003AB73C /* OpenAL.framework in Frameworks */,
 				C3CF46B919048702003AB73C /* UIKit.framework in Frameworks */,
@@ -745,7 +750,7 @@
 		C323671E190623C200E53297 /* AvatarIcons */ = {
 			isa = PBXGroup;
 			children = (
-				C323671F1906244100E53297 /* leon_icon.gif */,
+				C323671F1906244100E53297 /* 里昂_icon.gif */,
 				C32367201906244100E53297 /* jessica_icon.gif */,
 				C32367211906244100E53297 /* lana_icon.gif */,
 				C32367221906244100E53297 /* riana_icon.gif */,
@@ -754,7 +759,7 @@
 				C32367251906244100E53297 /* aaron_icon.gif */,
 				C32367261906244100E53297 /* shelly_icon.gif */,
 				C32367271906244100E53297 /* scott_icon.gif */,
-				C32367281906244100E53297 /* hain_icon.gif */,
+				C32367281906244100E53297 /* 海因_icon.gif */,
 				C32367291906244100E53297 /* 艾尔文_icon.gif */,
 			);
 			name = AvatarIcons;
@@ -798,6 +803,7 @@
 		C3CF46AD19048702003AB73C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C323677E190A2B6700E53297 /* MediaPlayer.framework */,
 				C3CF46AE19048702003AB73C /* QuartzCore.framework */,
 				C3CF46B019048702003AB73C /* OpenGLES.framework */,
 				C3CF46B219048702003AB73C /* OpenAL.framework */,
@@ -825,6 +831,7 @@
 		C3CF46C719048702003AB73C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C3236766190A183A00E53297 /* Langrisser2Opening.mp4 */,
 				C323675D190901DA00E53297 /* conversationTextPlists */,
 				C32367351906434700E53297 /* widgets */,
 				C323671E190623C200E53297 /* AvatarIcons */,
@@ -1750,7 +1757,7 @@
 				C3CF46DE19048702003AB73C /* Icon-120.png in Resources */,
 				C323672B1906244100E53297 /* jessica_icon.gif in Resources */,
 				C3CF48E219048707003AB73C /* LICENSE_CCBReader.txt in Resources */,
-				C323672A1906244100E53297 /* leon_icon.gif in Resources */,
+				C323672A1906244100E53297 /* 里昂_icon.gif in Resources */,
 				C323672D1906244100E53297 /* riana_icon.gif in Resources */,
 				C3CF46D419048702003AB73C /* Icon@2x.png in Resources */,
 				C3CF46E619048702003AB73C /* Icon-Small@2x.png in Resources */,
@@ -1771,6 +1778,7 @@
 				C3CF48CB19048707003AB73C /* LICENSE_Kazmath.txt in Resources */,
 				C3CF46D619048702003AB73C /* Icon-72.png in Resources */,
 				C3A07B15190493AF00C99426 /* Langrisser2.png in Resources */,
+				C3236767190A183B00E53297 /* Langrisser2Opening.mp4 in Resources */,
 				C32367391906435D00E53297 /* conversationNameBox.png in Resources */,
 				C3CF482419048705003AB73C /* LICENSE_cocos2d.txt in Resources */,
 				C3CF496A19048892003AB73C /* langrissa.png in Resources */,
@@ -1783,7 +1791,7 @@
 				C32367341906244100E53297 /* 艾尔文_icon.gif in Resources */,
 				C3CF495019048707003AB73C /* LICENSE_Chipmunk.txt in Resources */,
 				C3CF46EA19048702003AB73C /* Icon-Spotlight-iOS7@2x.png in Resources */,
-				C32367331906244100E53297 /* hain_icon.gif in Resources */,
+				C32367331906244100E53297 /* 海因_icon.gif in Resources */,
 				C3CF46DA19048702003AB73C /* Icon-76.png in Resources */,
 				C3CF48B019048706003AB73C /* ChangeLog in Resources */,
 				C32367311906244100E53297 /* shelly_icon.gif in Resources */,

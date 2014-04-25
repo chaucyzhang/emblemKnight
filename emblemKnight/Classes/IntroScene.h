@@ -10,7 +10,7 @@
 // Importing cocos2d.h and cocos2d-ui.h, will import anything you need to start using cocos2d-v3
 #import "cocos2d.h"
 #import "cocos2d-ui.h"
-
+#import <MediaPlayer/MediaPlayer.h>
 // -----------------------------------------------------------------------
 
 /**
@@ -19,7 +19,7 @@
  *  Main usage for CCLayer now, is to make colored backgrounds (rectangles)
  *
  */
-@interface IntroScene : CCScene
+@interface IntroScene : CCScene<UIGestureRecognizerDelegate>
 
 // -----------------------------------------------------------------------
 

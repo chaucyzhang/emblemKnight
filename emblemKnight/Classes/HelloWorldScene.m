@@ -20,6 +20,7 @@
 
 
 
+
 // -----------------------------------------------------------------------
 #pragma mark - HelloWorldScene
 // -----------------------------------------------------------------------
@@ -82,6 +83,7 @@
   Character *_lancer;
   Character *_elwin;
   Character *_hain;
+  Character *_leon;
   Character *_activeCharacter;
   
   int _currentConversationNumber;
@@ -114,6 +116,7 @@
   // Enable touch handling on scene node
   self.userInteractionEnabled = NO;
   [self initAccessories];
+  [self registerGameNotifications];
   [self loadConversationInCacheForStage:1];
   [self initBackground];
   [self initCharacterList];
@@ -127,6 +130,11 @@
 -(void)initAccessories
 {
   _currentConversationNumber=1;
+}
+
+-(void)registerGameNotifications
+{
+  [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(conversationEndded:) name:@"conversationEndNotification" object:nil];
 }
 
 
@@ -177,12 +185,12 @@
   
   
   //Elwin
-  CGPoint elWinPoint = CGPointMake(13, 2);
+  CGPoint elWinPoint = CGPointMake(14, 3);
   CGPoint elWinPosition = CGPointMake(252,170);
   _elwin=[self addSpriteWithNumber:elWinPoint atPosition:elWinPosition withName:@"艾尔文"];
   
   //Hain
-  CGPoint hainPoint = CGPointMake(14, 4);
+  CGPoint hainPoint = CGPointMake(15, 5);
   CGPoint hainPosition = CGPointMake(252,170-characterScaleHeight);
   _hain=[self addSpriteWithNumber:hainPoint atPosition:hainPosition withName:@"hain"];
   
@@ -207,7 +215,7 @@
   
   [self addChild:walkingSheet];
   
-  Character *walkingSprite = [Character spriteWithTexture:walkingSheet.texture rect:CGRectMake(spritePoint.x*spriteWidth, spritePoint.y*spriteHeight, spriteWidth, spriteHeight)];
+  Character *walkingSprite = [Character spriteWithTexture:walkingSheet.texture rect:CGRectMake((spritePoint.x-1)*spriteWidth, (spritePoint.y-1)*spriteHeight, spriteWidth, spriteHeight)];
   
   //  NSMutableArray *walkAnimFrames = [NSMutableArray array];
   //
@@ -302,8 +310,8 @@
   [_activeCharacterNameBox runAction:moveCharacterNameBoxY];
   [_activeConversationBox runAction:moveConversationBoxY];
   
-  NSTimeInterval delay = defaultConversationBoxAnimationDuration+3.0;
-  [self schedule:@selector(updateText) interval:2.0 repeat:kCCRepeatForever delay:delay];
+//  NSTimeInterval delay = defaultConversationBoxAnimationDuration+3.0;
+//  [self schedule:@selector(updateText) interval:2.0 repeat:kCCRepeatForever delay:delay];
 //  [self performSelector:@selector(animateRemoveConversationFrameScreen) withObject:nil afterDelay:delay];
 }
 
@@ -358,7 +366,7 @@
   if(newText==nil||newText.length==0)
   {
     //no text should stop timer;
-    [self unschedule:@selector(updateText)];
+ //   [self unschedule:@selector(updateText)];
     [self animateRemoveConversationFrameScreen];
     [self setUserInteractionEnabled:YES];
     [_stageMapView setUserInteractionEnabled:YES];
@@ -372,10 +380,188 @@
   _currentConversationNumber=0;
 }
 
+
+-(void)runGameScript
+{
+  
+  //scroll to bottom
+  CGPoint newPosition =CGPointMake(0,_stageMapView.contentNode.contentSize.height- self.contentSize.height);
+//  CGPoint oldPosition =_stageMapView.scrollPosition;
+//  float dist = ccpDistance(newPosition, oldPosition);
+  
+//  float scrollDuration = clampf(dist / kCCScrollViewSnapDurationFallOff, 0, kCCScrollViewSnapDuration);
+  
+  [_stageMapView setScrollPosition:newPosition animated:YES];
+  
+  
+  
+  [self runInitialConversationScript];
+}
+
+-(void)runInitialConversationScript
+{
+
+  int conversationDuration = 4.0;
+
+  CCActionSequence *sequence = [CCActionSequence actionWithArray:@[
+                                                                   //hain
+                              //  [CCActionDelay actionWithDuration:duration],
+                                [CCActionCallBlock actionWithBlock:^{
+    [self loadHainBox];
+                                }],
+                                [CCActionDelay actionWithDuration:conversationDuration],
+                                [CCActionCallBlock actionWithBlock:^{
+    [self RunRemoveConversationBoxScript];
+  }],
+                                //elwin
+                             //   [CCActionDelay actionWithDuration:duration],
+                                [CCActionCallBlock actionWithBlock:^{
+    [self loadElwinBox];
+  }],
+                                [CCActionDelay actionWithDuration:conversationDuration],
+                                [CCActionCallBlock actionWithBlock:^{
+    [self RunRemoveConversationBoxScript];
+  }],
+//Hain2
+                          //      [CCActionDelay actionWithDuration:duration],
+                                [CCActionCallBlock actionWithBlock:^{
+    [self loadHainBox];
+  }],
+                                [CCActionDelay actionWithDuration:conversationDuration],
+                                [CCActionCallBlock actionWithBlock:^{
+    [self RunRemoveConversationBoxScript];
+  }],
+//Elwin2
+                          //      [CCActionDelay actionWithDuration:duration],
+                                [CCActionCallBlock actionWithBlock:^{
+    [self loadElwinBox];
+  }],
+                                [CCActionDelay actionWithDuration:conversationDuration],
+                                [CCActionCallBlock actionWithBlock:^{
+    [self RunRemoveConversationBoxScript];
+  }],
+                                //leon1
+                                
+                                [CCActionCallBlock actionWithBlock:^{
+    [self loadBlueDragonKnightLeon];
+  }],
+                                [CCActionDelay actionWithDuration:defaultConversationBoxAnimationDuration],
+                                [CCActionCallBlock actionWithBlock:^{
+    [self scrollMapToCharacter:_leon withAnimation:YES];
+  }],
+           
+                               
+                                [CCActionCallBlock actionWithBlock:^{
+    [self loadLeonBox];
+  }],
+
+                                [CCActionDelay actionWithDuration:conversationDuration],
+                                [CCActionCallBlock actionWithBlock:^{
+    [self updateText];
+  }],
+                                [CCActionDelay actionWithDuration:conversationDuration],
+                                [CCActionCallBlock actionWithBlock:^{
+    [self RunRemoveConversationBoxScript];
+  }],
+                                [CCActionCallBlock actionWithBlock:^{
+    [self sendConversationEndNotification];
+  }],
+
+   
+
+                                ]];
+  [self runAction:sequence];
+}
+
+-(void)loadElwinBox
+{
+ [self performSelector:@selector(loadIconAndConversationBoxForCharacter:) withObject:@"艾尔文"];
+}
+
+-(void)loadHainBox
+{
+ [self performSelector:@selector(loadIconAndConversationBoxForCharacter:) withObject:@"海因"];
+}
+
+-(void)loadLeonBox
+{
+[self performSelector:@selector(loadIconAndConversationBoxForCharacter:) withObject:@"里昂"];
+}
+
+
+-(void)loadBlueDragonKnightLeon
+{
+  CGPoint leonPoint = CGPointMake(9, 17);
+  CGPoint leonPosition = CGPointMake(350,350);
+  _leon=[self addSpriteWithNumber:leonPoint atPosition:leonPosition withName:@"里昂"];
+  [_characterList addObject:_leon];
+  [_characterPositionInSheetMap setValue:[NSValue valueWithCGPoint:leonPoint] forKey:_leon.name];
+}
+
+-(void)scrollMapToCharacter:(Character *)character withAnimation:(BOOL)animation
+{
+  NSLog(@"%@",NSStringFromCGPoint(character.position));
+
+ // CGPoint point = [character convertToNodeSpace:character.position];
+  CGPoint scrollPoint =ccp(character.position.x-self.contentSize.width/2,[self convertSpriteYtoScrollY: character.position.y+self.contentSize.height/2]);
+  
+  if (scrollPoint.x>_stageMapView.contentNode.contentSize.width-self.contentSize.width) {
+    scrollPoint.x=_stageMapView.contentNode.contentSize.width-self.contentSize.width;
+  }
+  else if (scrollPoint.x<0){
+    scrollPoint.x=0;
+  }
+  NSLog(@"%f",self.contentSize.height);
+  if (scrollPoint.y>_stageMapView.contentNode.contentSize.height-self.contentSize.height) {
+    scrollPoint.y=_stageMapView.contentNode.contentSize.height-self.contentSize.height;
+  }
+  else if (scrollPoint.y<0){
+    scrollPoint.y=0;
+  }
+
+  [_stageMapView setScrollPosition:scrollPoint animated:YES];
+
+}
+
+-(CGFloat)convertSpriteYtoScrollY:(CGFloat)spriteY
+{
+  //spriteY should related to stage map
+  CGFloat scrollY = _stageMapView.contentNode.contentSize.height-spriteY;
+  return scrollY;
+}
+
+-(void)sendConversationEndNotification
+{
+  NSNotification *conversationEndNotification = [NSNotification notificationWithName:@"conversationEndNotification" object:nil];
+  [[NSNotificationCenter defaultCenter] performSelector:@selector(postNotification:) withObject:conversationEndNotification];
+}
+
+-(void)runConversationScript
+{
+  [self updateText];
+}
+
+-(void)RunRemoveConversationBoxScript
+{
+  [self animateRemoveConversationFrameScreen];
+}
+
+
+-(void)runConversationScriptWithDelay:(NSTimeInterval)delay
+{
+  [self performSelector:@selector(updateText) withObject:nil afterDelay:delay];
+}
+
+-(void)RunRemoveConversationBoxScriptWithDelay:(NSTimeInterval)delay
+{
+  [self performSelector:@selector(animateRemoveConversationFrameScreen) withObject:nil afterDelay:delay];
+}
+
 // -----------------------------------------------------------------------
 
 - (void)dealloc
 {
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
   // clean up code goes here
 }
 
@@ -390,15 +576,8 @@
   [_stageMapView setVerticalScrollEnabled:YES];
   [_stageMapView setPagingEnabled:NO];
   
-  CGPoint newPosition =CGPointMake(0,_stageMapView.contentNode.contentSize.height- self.contentSize.height);
-  CGPoint oldPosition =_stageMapView.scrollPosition;
-  float dist = ccpDistance(newPosition, oldPosition);
-  
-  float scrollDuration = clampf(dist / kCCScrollViewSnapDurationFallOff, 0, kCCScrollViewSnapDuration);
 
-  [_stageMapView setScrollPosition:newPosition animated:YES];
-  
-  [self performSelector:@selector(loadIconAndConversationBoxForCharacter:) withObject:@"艾尔文" afterDelay:scrollDuration];
+  [self runGameScript];
   
   
 
@@ -538,6 +717,12 @@
   [_activeCharacter performSelector:@selector(stopMoveAnimation) withObject:nil afterDelay:duration];
   _activeCharacter = nil;
   }
+}
+
+-(void)conversationEndded:(NSNotification *)notification
+{
+  self.userInteractionEnabled=YES;
+  _stageMapView.userInteractionEnabled=YES;
 }
 
 
