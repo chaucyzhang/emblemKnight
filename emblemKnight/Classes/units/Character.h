@@ -6,6 +6,7 @@
 //  Copyright 2014 Administrator. All rights reserved.
 //
 
+
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
