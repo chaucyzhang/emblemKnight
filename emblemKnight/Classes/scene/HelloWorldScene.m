@@ -6,17 +6,14 @@
 //  Copyright Administrator 2014. All rights reserved.
 //
 // -----------------------------------------------------------------------
-#define spriteWidth 25.6
-#define spriteHeight 28.4
 
-#define characterScaleWidth 32
-#define characterScaleHeight 32
 
 #import "HelloWorldScene.h"
 #import "IntroScene.h"
 #import "CCAnimation.h"
 #import "Character.h"
 #import "MathUtil.h"
+#import "BattleScene.h"
 
 
 
@@ -151,7 +148,7 @@
   //Hain
   CGPoint hainPoint = CGPointMake(15, 5);
   CGPoint hainPosition = CGPointMake(252,170-characterScaleHeight);
-  _hain=[self addSpriteWithNumber:hainPoint atPosition:hainPosition withName:@"hain"];
+  _hain=[self addSpriteWithNumber:hainPoint atPosition:hainPosition withName:@"海因"];
   
   [_characterList addObject:_elwin];
  // [_characterList addObject:_lancer];
@@ -682,6 +679,16 @@
 {
   self.userInteractionEnabled=YES;
   _stageMapView.userInteractionEnabled=YES;
+  [self loadBattleSceneWithAllianceName:_elwin.name andEnemyName:_leon.name];
+  
+}
+
+-(void)loadBattleSceneWithAllianceName:(NSString *)allianceCommanderName andEnemyName:(NSString *)enemyCommanderName
+{
+  CCScene *battleScene = [[BattleScene alloc] initWithAllianceCommander:allianceCommanderName andEnemyCommander:enemyCommanderName];
+  
+  [[CCDirector sharedDirector] replaceScene:battleScene
+                             withTransition:[CCTransition transitionFadeWithDuration:1.0 ]];
 }
 
 

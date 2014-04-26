@@ -19,6 +19,7 @@
 @implementation Character{
   CCSpriteBatchNode *_spriteSheet;
   CCAction *_moveAnimation;
+  CCAction *_battbleMoveAnimation;
 }
 
 @synthesize originalFrame;
@@ -63,6 +64,46 @@
     [self performSelector:@selector(setSpriteFrame:) withObject:self.originalFrame afterDelay:defaultSpriteAnimationDelayTime];
   }
 }
+
+
+-(void)addBattleMoveAnimationWithTextPointInSheet:(CGPoint)spritePoint
+{
+  if (_battbleMoveAnimation==nil) {
+    
+    
+    CCSpriteBatchNode *walkingSheet = [CCSpriteBatchNode batchNodeWithFile:[NSString stringWithFormat:@"%@_重骑兵.png",self.name]];
+    NSMutableArray *walkAnimFrames = [NSMutableArray array];
+    
+    for(int i = 0; i <= 2; i++)
+    {
+      CCSpriteFrame *frame = [CCSpriteFrame frameWithTexture:walkingSheet.texture rectInPixels:CGRectMake((spritePoint.x-1)*battleSceneSpriteWidth+i*battleSceneSpriteWidth, 0, battleSceneSpriteWidth, battleSceneSpriteHeight) rotated:NO offset:ccp(0,0) originalSize:CGSizeMake(battleSceneSpriteWidth, battleSceneSpriteHeight)];
+      [walkAnimFrames addObject:frame];
+      
+    }
+    CCAnimation *walkAnim = [CCAnimation
+                             animationWithSpriteFrames:walkAnimFrames delay:defualtBattbleSceneCharacterAnimationDelayTime];
+    self.originalFrame=[walkAnimFrames objectAtIndex:0];
+    CCActionAnimate *animationAction = [CCActionAnimate actionWithAnimation:walkAnim];
+    
+    CCActionRepeatForever *repeatingAnimation = [CCActionRepeatForever actionWithAction:animationAction];
+    
+    
+    _battbleMoveAnimation=repeatingAnimation;
+  }
+  
+  [self runAction:_battbleMoveAnimation];
+}
+
+-(void)stopBattleMoveAnimation
+{
+  [self stopAction:_battbleMoveAnimation];
+  if (self.originalFrame!=nil) {
+    [self performSelector:@selector(setSpriteFrame:) withObject:self.originalFrame afterDelay:defualtBattbleSceneCharacterAnimationDelayTime];
+  }
+}
+
+
+
 
 
 @end

@@ -17,4 +17,7 @@
 
 -(void)addMoveAnimationWithTextPointInSheet:(CGPoint)spritePoint;
 -(void)stopMoveAnimation;
+
+-(void)addBattleMoveAnimationWithTextPointInSheet:(CGPoint)spritePoint;
+-(void)stopBattleMoveAnimation;
 @end
