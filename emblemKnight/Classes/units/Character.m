@@ -53,7 +53,9 @@
 
   _moveAnimation=repeatingAnimation;
       }
-  
+  if (![self isRunningInActiveScene]) {
+    [self forceSetInActiveScene];
+  }
   [self runAction:_moveAnimation];
 }
 
@@ -81,7 +83,7 @@
       
     }
     CCAnimation *walkAnim = [CCAnimation
-                             animationWithSpriteFrames:walkAnimFrames delay:defualtBattbleSceneCharacterAnimationDelayTime];
+                             animationWithSpriteFrames:walkAnimFrames delay:defaultBattbleSceneCharacterAnimationDelayTime];
     self.originalFrame=[walkAnimFrames objectAtIndex:0];
     CCActionAnimate *animationAction = [CCActionAnimate actionWithAnimation:walkAnim];
     
@@ -98,7 +100,7 @@
 {
   [self stopAction:_battbleMoveAnimation];
   if (self.originalFrame!=nil) {
-    [self performSelector:@selector(setSpriteFrame:) withObject:self.originalFrame afterDelay:defualtBattbleSceneCharacterAnimationDelayTime];
+    [self performSelector:@selector(setSpriteFrame:) withObject:self.originalFrame afterDelay:defaultBattbleSceneCharacterAnimationDelayTime];
   }
 }
 

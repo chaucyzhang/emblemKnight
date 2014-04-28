@@ -50,8 +50,10 @@
 {
   self.userInteractionEnabled = NO;
   [self loadBG];
+  [self loadAvatarsAndTexts];
   [self loadArmy];
   [self runBattbleScript];
+ // [self performSelector:@selector(sendBattleSceneEndNotification) withObject:nil afterDelay:4 ];
   [super onEnter];
 }
 
@@ -62,8 +64,59 @@
   [self scaleCharacter:mBG withWidth:self.contentSize.width andHeight:self.contentSize.height];
   mBG.position=ccp(0.5f*self.contentSize.width, 0.5f*self.contentSize.height);
   [self addChild:mBG];
-  NSLog(@"%f,%f",self.contentSize.width,self.contentSize.height);
+
 }
+
+-(void)loadAvatarsAndTexts
+{
+  [self loadAllianceAvatar];
+  [self loadEnemyAvatar];
+  [self loadAllianceNameText];
+  [self loadEnemyNameText];
+}
+
+-(void)loadAllianceAvatar
+{
+  CCSprite *allianceAvatar = [CCSprite spriteWithImageNamed:[NSString stringWithFormat:@"%@_icon.gif",self.allianceCommanderName]];
+  allianceAvatar.position=ccp(allianceAvatar.contentSize.width+battleSceneAvatarPaddingX,allianceAvatar.contentSize.height/2+battleSceneAvatarPaddingY);
+  [mBG addChild:allianceAvatar];
+}
+
+-(void)loadEnemyAvatar
+{
+  CCSprite *enemyAvatar = [CCSprite spriteWithImageNamed:[NSString stringWithFormat:@"%@_icon.gif",self.enemyCommanderName]];
+  enemyAvatar.position=ccp(self.contentSize.width - enemyAvatar.contentSize.width-battleSceneAvatarPaddingX,enemyAvatar.contentSize.height/2+battleSceneAvatarPaddingY);
+  [mBG addChild:enemyAvatar];
+}
+
+
+-(void)loadAllianceNameText
+{
+  CCLabelTTF *label = [CCLabelTTF labelWithString:self.allianceCommanderName fontName:@"HelveticaNeue-Medium" fontSize:14.0f dimensions:CGSizeMake(64, 20)];
+  label.position=ccp(64+battleSceneAvatarPaddingX, 64+battleSceneAvatarPaddingY+10);
+  label.color = [CCColor whiteColor];
+  [label setVerticalAlignment:CCTextAlignmentCenter];
+  [label setHorizontalAlignment:CCTextAlignmentCenter];
+  [mBG addChild:label];
+}
+
+-(void)loadEnemyNameText
+{
+  CCLabelTTF *label = [CCLabelTTF labelWithString:self.enemyCommanderName fontName:@"HelveticaNeue-Medium" fontSize:14.0f dimensions:CGSizeMake(64, 20)];
+  label.position=ccp(self.contentSize.width-64-battleSceneAvatarPaddingX, 64+battleSceneAvatarPaddingY+10);
+  label.color = [CCColor whiteColor];
+  [label setVerticalAlignment:CCTextAlignmentCenter];
+  [label setHorizontalAlignment:CCTextAlignmentCenter];
+  [mBG addChild:label];
+}
+
+
+-(void)sendBattleSceneEndNotification
+{
+  NSNotification *battleSceneEndNotification = [NSNotification notificationWithName:@"battleSceneEndNotification" object:nil];
+  [[NSNotificationCenter defaultCenter] performSelector:@selector(postNotification:) withObject:battleSceneEndNotification];
+}
+
 
 -(void)loadArmy
 {
@@ -75,6 +128,11 @@
 {
   [self loadAllianceMoveScript];
   [self loadEnemyMoveScript];
+  
+  int accessoryAnimationDuration = 2.0;
+  [self performSelector:@selector(sendBattleSceneEndNotification) withObject:nil afterDelay:defaultBattleSceneAnimationDuration+accessoryAnimationDuration];
+  
+
 }
 
 -(void)loadAllianceMoveScript
@@ -87,14 +145,16 @@
   CCAction *nodeActionBack = [CCActionMoveTo actionWithDuration:1.0 position:originPoint];
   [_allianceCommander addBattleMoveAnimationWithTextPointInSheet:CGPointMake(1, 1)];
   CCActionSequence *allianceSequence =[CCActionSequence  actionWithArray:@[
-                                                                           [CCActionDelay actionWithDuration:defualtBattbleSceneCharacterAnimationDelayTime],
+                                                                           [CCActionDelay actionWithDuration:defaultBattbleSceneCharacterAnimationDelayTime],
                                                                            nodeActionGo,
                                                                            [CCActionFlipX actionWithFlipX:YES],
                                                                            nodeActionBack,
                                                                            [CCActionCallBlock actionWithBlock:^{
     [_allianceCommander stopBattleMoveAnimation];
   }],
-                                                                           [CCActionFlipX actionWithFlipX:NO]
+                                                                           [CCActionFlipX actionWithFlipX:NO],
+                                                                        
+                                                                           
                                                                            ]];
   [_allianceCommander runAction:allianceSequence];
 }
@@ -110,7 +170,7 @@
   [_enemyCommander addBattleMoveAnimationWithTextPointInSheet:CGPointMake(1, 1)];
   CCActionSequence *enemySequence =[CCActionSequence  actionWithArray:@[
                                                                            [CCActionFlipX actionWithFlipX:YES],
-                                                                           [CCActionDelay actionWithDuration:defualtBattbleSceneCharacterAnimationDelayTime],
+                                                                           [CCActionDelay actionWithDuration:defaultBattbleSceneCharacterAnimationDelayTime],
                                                                            nodeActionGo,
                                                                            [CCActionFlipX actionWithFlipX:NO],
                                                                            nodeActionBack,
@@ -124,13 +184,13 @@
 
 -(void)loadAllianceCommander
 {
- _allianceCommander= [self addSpriteWithNumber:CGPointMake(1, 1) atPosition:CGPointMake(battleSceneSpriteScaleWidth, self.contentSize.height/2) withName:self.allianceCommanderName];
+ _allianceCommander= [self addSpriteWithNumber:CGPointMake(1, 1) atPosition:CGPointMake(battleSceneSpriteScaleWidth, battleSceneCharacterOriginY) withName:self.allianceCommanderName];
   [_allianceCommander setUserInteractionEnabled:NO];
 }
 
 -(void)loadEnemyCommander
 {
- _enemyCommander= [self addSpriteWithNumber:CGPointMake(1, 1) atPosition:CGPointMake(self.contentSize.width-battleSceneSpriteScaleWidth, self.contentSize.height/2) withName:self.enemyCommanderName];
+ _enemyCommander= [self addSpriteWithNumber:CGPointMake(1, 1) atPosition:CGPointMake(self.contentSize.width-battleSceneSpriteScaleWidth, battleSceneCharacterOriginY) withName:self.enemyCommanderName];
   [_enemyCommander setUserInteractionEnabled:NO];
 }
 

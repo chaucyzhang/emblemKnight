@@ -43,29 +43,7 @@
     // Apple recommend assigning self with supers return value
     self = [super init];
     if (!self) return(nil);
-<<<<<<< HEAD
-  
 
-//  CCSprite *logo = [CCSprite spriteWithImageNamed:@"Langrisser2.png"];
-//  logo.position=ccp(0.5f*self.contentSize.width, 0.5f*self.contentSize.height);
-//  [logo setScaleX: self.contentSize.width/logo.contentSize.width];
-//  [logo setScaleY: self.contentSize.height/logo.contentSize.height];
-//  [self addChild:logo];
-// // [self performSelector:@selector(onAppLoad) withObject:nil afterDelay:2.0];
-//
-//  CCLabelTTF *label = [CCLabelTTF labelWithString:@"Click Screen To Start A New Game" fontName:@"Zapfino" fontSize:12.0f];
-//    label.positionType = CCPositionTypeNormalized;
-//    label.color = [CCColor whiteColor];
-//    label.position = ccp(0.5f, 0.2f); // Middle of screen
-//    [self addChild:label];
-// 
-//  CCActionBlink *blinker = [CCActionBlink actionWithDuration: 1.5 blinks: 1];
-//  CCActionRepeatForever *repeatingAnimation = [CCActionRepeatForever actionWithAction:blinker];
-//  _startLabel=label;
-//  [label runAction:repeatingAnimation];
-//  [self loadOP];
-=======
->>>>>>> FETCH_HEAD
 	return self;
 }
 

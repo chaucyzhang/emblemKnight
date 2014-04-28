@@ -24,7 +24,9 @@
 #define defaultSpriteAnimationDelayTime 0.4
 #define defaultConversationBoxAnimationDuration 1.0
 
-#define defualtBattbleSceneCharacterAnimationDelayTime 0.2
+#define defaultBattbleSceneCharacterAnimationDelayTime 0.2
+
+#define defaultBattleSceneAnimationDuration 2.0
 
 //------------- cocos2d v3 missed -----------------------//
 #define kCCScrollViewSnapDuration 0.4
@@ -32,3 +34,8 @@
 
 //-------------- padding margin related ----------------//
 #define kCommonPadding 10.0
+
+/*-------------- battle scene related -------------------*/
+#define battleSceneCharacterOriginY 185.0
+#define battleSceneAvatarPaddingX 10.0
+#define battleSceneAvatarPaddingY 20.0

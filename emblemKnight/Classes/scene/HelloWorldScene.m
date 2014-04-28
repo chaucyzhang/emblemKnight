@@ -49,6 +49,7 @@
   
   BOOL _isTryingToMoveCharacter;
   BOOL _isScrollingMap;
+  BOOL _gamePaused;
 }
 
 
@@ -83,6 +84,25 @@
   return self;
 }
 
+- (void) pauseGame
+{
+  CCLOG(@"Pause game");
+  _gamePaused=YES;
+ // [self setPaused:YES];
+  
+}
+
+-(void)resumeGame
+{
+ // [self setPaused:NO];
+  _gamePaused=NO;
+ // self.userInteractionEnabled = YES;
+//  for (CCNode *child in [self children]) {
+//    [child setPaused:NO];
+//    
+//  }
+}
+
 -(void)initAccessories
 {
   _currentConversationNumber=1;
@@ -91,6 +111,7 @@
 -(void)registerGameNotifications
 {
   [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(conversationEndded:) name:@"conversationEndNotification" object:nil];
+  [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(battleSceneEndded:) name:@"battleSceneEndNotification" object:nil];
 }
 
 
@@ -356,7 +377,8 @@
 
 -(void)runInitialConversationScript
 {
-
+  [self performSelector:@selector(sendConversationEndNotification) withObject:nil afterDelay:3.0];
+  return;
   int conversationDuration = 4.0;
 
   CCActionSequence *sequence = [CCActionSequence actionWithArray:@[
@@ -419,6 +441,7 @@
                                 [CCActionCallBlock actionWithBlock:^{
     [self RunRemoveConversationBoxScript];
   }],
+                                 [CCActionDelay actionWithDuration:defaultConversationBoxAnimationDuration],
                                 [CCActionCallBlock actionWithBlock:^{
     [self sendConversationEndNotification];
   }],
@@ -528,13 +551,19 @@
 - (void)onEnter
 {
   // always call super onEnter first
+  if (!_gamePaused) {
+    
+
   [super onEnter];
   [_stageMapView setVerticalScrollEnabled:YES];
   [_stageMapView setPagingEnabled:NO];
   
 
   [self runGameScript];
-  
+    }
+  else{
+    [self resumeGame];
+  }
   
 
   
@@ -681,14 +710,25 @@
   _stageMapView.userInteractionEnabled=YES;
   [self loadBattleSceneWithAllianceName:_elwin.name andEnemyName:_leon.name];
   
+  
+}
+
+-(void)battleSceneEndded:(NSNotification *)notification
+{
+  [[CCDirector sharedDirector] popSceneWithTransition:[CCTransition transitionFadeWithDuration:0.5 ]];
 }
 
 -(void)loadBattleSceneWithAllianceName:(NSString *)allianceCommanderName andEnemyName:(NSString *)enemyCommanderName
 {
+  if (enemyCommanderName==nil) {
+    enemyCommanderName=@"里昂";
+  }
   CCScene *battleScene = [[BattleScene alloc] initWithAllianceCommander:allianceCommanderName andEnemyCommander:enemyCommanderName];
-  
-  [[CCDirector sharedDirector] replaceScene:battleScene
-                             withTransition:[CCTransition transitionFadeWithDuration:1.0 ]];
+  [self pauseGame];
+  [[CCDirector sharedDirector] pushScene:battleScene
+                             withTransition:[CCTransition transitionFadeWithDuration:0.5 ]];
+//  [[CCDirector sharedDirector] replaceScene:battleScene
+//                             withTransition:[CCTransition transitionFadeWithDuration:1.0 ]];
 }
 
 

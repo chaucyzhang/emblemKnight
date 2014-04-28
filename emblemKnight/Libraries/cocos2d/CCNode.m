@@ -1095,6 +1095,12 @@ CGAffineTransformMakeRigid(CGPoint translate, CGFloat radians)
 	[_children makeObjectsPerformSelector:@selector(onExit)];
 }
 
+#pragma mark - bug cocos2d
+-(void)forceSetInActiveScene
+{
+  _isInActiveScene=YES;
+}
+
 #pragma mark CCNode Actions
 
 -(void) setActionManager:(CCActionManager *)actionManager
@@ -1114,7 +1120,7 @@ CGAffineTransformMakeRigid(CGPoint translate, CGFloat radians)
 -(CCAction*) runAction:(CCAction*) action
 {
 	NSAssert( action != nil, @"Argument must be non-nil");
-
+ 
 	[_actionManager addAction:action target:self paused:!self.runningInActiveScene];
 	return action;
 }
