@@ -74,6 +74,7 @@
     
     
     CCSpriteBatchNode *walkingSheet = [CCSpriteBatchNode batchNodeWithFile:[NSString stringWithFormat:@"%@_重骑兵.png",self.name]];
+    _spriteSheet=walkingSheet;
     NSMutableArray *walkAnimFrames = [NSMutableArray array];
     
     for(int i = 0; i <= 2; i++)
@@ -105,6 +106,18 @@
 }
 
 
+-(CCSpriteFrame *)getBattleDieSpriteWithName:(NSString *)name andTextPointInSheet:(CGPoint)spritePoint
+{
+  CCSpriteFrame *frame = [CCSpriteFrame frameWithTexture:_spriteSheet.texture rectInPixels: CGRectMake(4*battleSceneSpriteWidth, 0, 24, battleSceneSpriteHeight) rotated:NO offset:ccp(0,0) originalSize:CGSizeMake(24, battleSceneSpriteHeight)];
+
+  return frame;
+}
+
+-(void)scaleCharacter:(CCSprite *)character withWidth:(float)width andHeight:(float)height
+{
+  [character setScaleX: width/character.contentSize.width];
+  [character setScaleY: height/character.contentSize.height];
+}
 
 
 

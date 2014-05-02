@@ -21,4 +21,6 @@
 
 -(void)addBattleMoveAnimationWithTextPointInSheet:(CGPoint)spritePoint;
 -(void)stopBattleMoveAnimation;
+
+-(CCSpriteFrame *)getBattleDieSpriteWithName:(NSString *)name andTextPointInSheet:(CGPoint)spritePoint;
 @end

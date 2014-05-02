@@ -473,6 +473,7 @@
   CGPoint leonPoint = CGPointMake(9, 17);
   CGPoint leonPosition = CGPointMake(350,350);
   _leon=[self addSpriteWithNumber:leonPoint atPosition:leonPosition withName:@"里昂"];
+  [_leon setFlipX:YES];
   [_characterList addObject:_leon];
   [_characterPositionInSheetMap setValue:[NSValue valueWithCGPoint:leonPoint] forKey:_leon.name];
 }
