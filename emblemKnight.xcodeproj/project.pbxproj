@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1312AC5919136CD000A47327 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1312AC5719136CD000A47327 /* Model.xcdatamodeld */; };
+		1312AC6119136ED500A47327 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1312AC6019136ED500A47327 /* GameManager.m */; };
+		1312AC641913746800A47327 /* CharacterObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1312AC631913746800A47327 /* CharacterObject.m */; };
+		1312AC6619137E0500A47327 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1312AC6519137E0500A47327 /* CoreData.framework */; };
 		C32367191905D4AD00E53297 /* Stage1.png in Resources */ = {isa = PBXBuildFile; fileRef = C32367181905D4AD00E53297 /* Stage1.png */; };
 		C323672A1906244100E53297 /* 里昂_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C323671F1906244100E53297 /* 里昂_icon.gif */; };
 		C323672B1906244100E53297 /* jessica_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367201906244100E53297 /* jessica_icon.gif */; };
@@ -338,6 +342,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1312AC5819136CD000A47327 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		1312AC5F19136ED500A47327 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameManager.h; path = GameManager/GameManager.h; sourceTree = "<group>"; };
+		1312AC6019136ED500A47327 /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameManager.m; path = GameManager/GameManager.m; sourceTree = "<group>"; };
+		1312AC621913746800A47327 /* CharacterObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CharacterObject.h; path = DataObjects/CharacterObject.h; sourceTree = "<group>"; };
+		1312AC631913746800A47327 /* CharacterObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CharacterObject.m; path = DataObjects/CharacterObject.m; sourceTree = "<group>"; };
+		1312AC6519137E0500A47327 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C32367181905D4AD00E53297 /* Stage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stage1.png; path = Resources/StageMaps/Stage1.png; sourceTree = "<group>"; };
 		C323671F1906244100E53297 /* 里昂_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "里昂_icon.gif"; path = "Resources/AvatarIcons/里昂_icon.gif"; sourceTree = "<group>"; };
 		C32367201906244100E53297 /* jessica_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = jessica_icon.gif; path = Resources/AvatarIcons/jessica_icon.gif; sourceTree = "<group>"; };
@@ -890,6 +900,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1312AC6619137E0500A47327 /* CoreData.framework in Frameworks */,
 				C323677F190A2B6700E53297 /* MediaPlayer.framework in Frameworks */,
 				C3CF46C519048702003AB73C /* libObjectiveChipmunk.a in Frameworks */,
 				C3CF46B319048702003AB73C /* OpenAL.framework in Frameworks */,
@@ -907,6 +918,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1312AC5619136CA500A47327 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				1312AC5719136CD000A47327 /* Model.xcdatamodeld */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		1312AC5D19136E1800A47327 /* DataObjects */ = {
+			isa = PBXGroup;
+			children = (
+				1312AC621913746800A47327 /* CharacterObject.h */,
+				1312AC631913746800A47327 /* CharacterObject.m */,
+			);
+			name = DataObjects;
+			sourceTree = "<group>";
+		};
+		1312AC5E19136E6100A47327 /* GameManager */ = {
+			isa = PBXGroup;
+			children = (
+				1312AC5F19136ED500A47327 /* GameManager.h */,
+				1312AC6019136ED500A47327 /* GameManager.m */,
+			);
+			name = GameManager;
+			sourceTree = "<group>";
+		};
 		C32367171905D49400E53297 /* StageMaps */ = {
 			isa = PBXGroup;
 			children = (
@@ -1104,6 +1141,7 @@
 		C3CF46AD19048702003AB73C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1312AC6519137E0500A47327 /* CoreData.framework */,
 				C323677E190A2B6700E53297 /* MediaPlayer.framework */,
 				C3CF46AE19048702003AB73C /* QuartzCore.framework */,
 				C3CF46B019048702003AB73C /* OpenGLES.framework */,
@@ -1121,6 +1159,7 @@
 		C3CF46C619048702003AB73C /* emblemKnight */ = {
 			isa = PBXGroup;
 			children = (
+				1312AC5619136CA500A47327 /* data */,
 				C3CF46C719048702003AB73C /* Resources */,
 				C3CF46F019048702003AB73C /* Libraries */,
 				C3CF495519048708003AB73C /* Classes */,
@@ -1957,6 +1996,8 @@
 		C3CF495519048708003AB73C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1312AC5E19136E6100A47327 /* GameManager */,
+				1312AC5D19136E1800A47327 /* DataObjects */,
 				C33F4B45190B2B2A005EF6E8 /* scene */,
 				C33F4B3B190B2A15005EF6E8 /* units */,
 				C323671A1905E68B00E53297 /* utils */,
@@ -2226,6 +2267,7 @@
 				C3CF473519048703003AB73C /* ccGLStateCache.m in Sources */,
 				C3CF482D19048705003AB73C /* OALActionManager.m in Sources */,
 				C3CF478C19048704003AB73C /* CCScheduler.m in Sources */,
+				1312AC641913746800A47327 /* CharacterObject.m in Sources */,
 				C3CF476019048703003AB73C /* CCParticleExamples.m in Sources */,
 				C3CF489219048706003AB73C /* CCSlider.m in Sources */,
 				C3CF47CD19048704003AB73C /* CCTMXXMLParser.m in Sources */,
@@ -2302,6 +2344,7 @@
 				C3CF48C519048707003AB73C /* vec2.c in Sources */,
 				C3CF46F519048702003AB73C /* CCAction.m in Sources */,
 				C3CF475919048703003AB73C /* CCParallaxNode.m in Sources */,
+				1312AC6119136ED500A47327 /* GameManager.m in Sources */,
 				C3CF48C119048707003AB73C /* ray2.c in Sources */,
 				C3CF483D19048705003AB73C /* OALAudioTracks.m in Sources */,
 				C3CF483A19048705003AB73C /* OALAudioTrackNotifications.m in Sources */,
@@ -2337,6 +2380,7 @@
 				C3CF484919048705003AB73C /* ALCaptureDevice.m in Sources */,
 				C3CF478519048704003AB73C /* CCResponderManager.m in Sources */,
 				C3CF471D19048703003AB73C /* CCConfiguration.m in Sources */,
+				1312AC5919136CD000A47327 /* Model.xcdatamodeld in Sources */,
 				C3CF486019048706003AB73C /* ALWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2553,6 +2597,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1312AC5719136CD000A47327 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1312AC5819136CD000A47327 /* Model.xcdatamodel */,
+			);
+			currentVersion = 1312AC5819136CD000A47327 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = data/Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C3CF46A319048702003AB73C /* Project object */;
 }
