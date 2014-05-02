@@ -39,8 +39,7 @@
   // Apple recommend assigning self with supers return value
   self = [super init];
   if (!self) return(nil);
-  _allianceLifeData = 10;
-  _enemyLifeData = 10;
+
   return self;
 }
 
@@ -58,6 +57,7 @@
   [self loadBG];
   [self loadAvatarsAndTexts];
   [self loadArmy];
+  [self setLifeDatas];
   [self runBattbleScript];
   [self runLifeCalculationScript];
  // [self performSelector:@selector(sendBattleSceneEndNotification) withObject:nil afterDelay:4 ];
@@ -71,6 +71,12 @@
   [self scaleCharacter:mBG withWidth:self.contentSize.width andHeight:self.contentSize.height];
   mBG.position=ccp(0.5f*self.contentSize.width, 0.5f*self.contentSize.height);
   [self addChild:mBG];
+}
+
+-(void)setLifeDatas
+{
+    _allianceLifeData = [_allianceCommander.characterObject.hp intValue];
+    _enemyLifeData = [_enemyCommander.characterObject.hp intValue];;
 }
 
 -(void)loadAvatarsAndTexts
@@ -364,9 +370,22 @@
 
 -(void)loadAllianceCommander
 {
- _allianceCommander= [self addSpriteWithNumber:CGPointMake(1, 1) atPosition:CGPointMake(battleSceneSpriteScaleWidth, battleSceneCharacterOriginY) withName:self.allianceCommanderName];
- 
+   _allianceCommander= [self addSpriteWithNumber:CGPointMake(1, 1) atPosition:CGPointMake(battleSceneSpriteScaleWidth, battleSceneCharacterOriginY) withName:self.allianceCommanderName];
   [_allianceCommander setUserInteractionEnabled:NO];
+    CharacterObject *elwin;
+    elwin=[[GameManager manager] getCharacterObjectByName:self.allianceCommanderName];
+    if (elwin==nil) {
+        elwin = [[GameManager manager] insertCharacterIntoDB];
+        [elwin setName:self.allianceCommanderName];
+        [elwin setHp:[NSNumber numberWithInteger:10]];
+        [elwin setMp:[NSNumber numberWithInteger:0]];
+        [elwin setAt:[NSNumber numberWithInteger:25]];
+        [elwin setDf:[NSNumber numberWithInteger:17]];
+        [[GameManager manager] saveContext];
+    }
+
+    [_allianceCommander setCharacterObject:elwin];
+    
 }
 
 -(void)loadEnemyCommander
@@ -374,6 +393,20 @@
  _enemyCommander= [self addSpriteWithNumber:CGPointMake(1, 1) atPosition:CGPointMake(self.contentSize.width-battleSceneSpriteScaleWidth, battleSceneCharacterOriginY) withName:self.enemyCommanderName];
    [_enemyCommander setFlipX:YES];
   [_enemyCommander setUserInteractionEnabled:NO];
+    CharacterObject *leon;
+    
+    leon=[[GameManager manager] getCharacterObjectByName:self.enemyCommanderName];
+    if (leon==nil) {
+    CharacterObject *leon = [[GameManager manager] insertCharacterIntoDB];
+    [leon setName:self.enemyCommanderName];
+    [leon setHp:[NSNumber numberWithInteger:10]];
+    [leon setMp:[NSNumber numberWithInteger:0]];
+    [leon setAt:[NSNumber numberWithInteger:32]];
+    [leon setDf:[NSNumber numberWithInteger:24]];
+    [[GameManager manager] saveContext];
+    }
+     [_enemyCommander setCharacterObject:leon];
+
 }
 
 

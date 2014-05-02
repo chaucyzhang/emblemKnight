@@ -9,11 +9,15 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "GameManager.h"
 
 @interface Character : CCSprite {
     
 }
 @property (nonatomic,strong)NSString *name;
+@property (nonatomic,strong)CharacterObject *characterObject;
+
+
 @property (nonatomic,strong)CCSpriteFrame *originalFrame;
 
 -(void)addMoveAnimationWithTextPointInSheet:(CGPoint)spritePoint;
