@@ -368,7 +368,7 @@
       }] rate:2];
       CCActionCallFunc* callFunc = [CCActionCallFunc actionWithTarget:self selector:@selector(xAnimationDone)];
       action = [CCActionSequence actions:action, callFunc, nil];
-      action.tag = kCCScrollViewActionXTag;
+//      action.tag = kCCScrollViewActionXTag;
       [_contentNode runAction:action];
     }
     if (yMoved)
@@ -384,7 +384,7 @@
       }] rate:2];
       CCActionCallFunc* callFunc = [CCActionCallFunc actionWithTarget:self selector:@selector(yAnimationDone)];
       action = [CCActionSequence actions:action, callFunc, nil];
-  //    action.tag = kCCScrollViewActionYTag;
+//      action.tag = kCCScrollViewActionYTag;
       [_contentNode runAction:action];
       
     }

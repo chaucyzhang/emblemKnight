@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C323671019049DF600E53297 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = C323670F19049DF600E53297 /* Character.m */; };
-		C32367131904BBAD00E53297 /* gameConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C32367121904BBAD00E53297 /* gameConstants.m */; };
-		C32367161904D01500E53297 /* MathUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C32367151904D01500E53297 /* MathUtil.m */; };
 		C32367191905D4AD00E53297 /* Stage1.png in Resources */ = {isa = PBXBuildFile; fileRef = C32367181905D4AD00E53297 /* Stage1.png */; };
-		C323672A1906244100E53297 /* leon_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C323671F1906244100E53297 /* leon_icon.gif */; };
+		C323672A1906244100E53297 /* 里昂_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C323671F1906244100E53297 /* 里昂_icon.gif */; };
 		C323672B1906244100E53297 /* jessica_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367201906244100E53297 /* jessica_icon.gif */; };
 		C323672C1906244100E53297 /* lana_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367211906244100E53297 /* lana_icon.gif */; };
 		C323672D1906244100E53297 /* riana_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367221906244100E53297 /* riana_icon.gif */; };
@@ -20,13 +17,108 @@
 		C32367301906244100E53297 /* aaron_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367251906244100E53297 /* aaron_icon.gif */; };
 		C32367311906244100E53297 /* shelly_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367261906244100E53297 /* shelly_icon.gif */; };
 		C32367321906244100E53297 /* scott_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367271906244100E53297 /* scott_icon.gif */; };
-		C32367331906244100E53297 /* hain_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367281906244100E53297 /* hain_icon.gif */; };
+		C32367331906244100E53297 /* 海因_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367281906244100E53297 /* 海因_icon.gif */; };
 		C32367341906244100E53297 /* 艾尔文_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367291906244100E53297 /* 艾尔文_icon.gif */; };
 		C32367381906435D00E53297 /* conversationBox.png in Resources */ = {isa = PBXBuildFile; fileRef = C32367361906435D00E53297 /* conversationBox.png */; };
 		C32367391906435D00E53297 /* conversationNameBox.png in Resources */ = {isa = PBXBuildFile; fileRef = C32367371906435D00E53297 /* conversationNameBox.png */; };
 		C323673B1906593100E53297 /* KnightsErrant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C323673A1906593100E53297 /* KnightsErrant.mp3 */; };
 		C323673D19065C3600E53297 /* openning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C323673C19065C3600E53297 /* openning.mp3 */; };
 		C323675F1909023D00E53297 /* conversations.plist in Resources */ = {isa = PBXBuildFile; fileRef = C323675E1909023D00E53297 /* conversations.plist */; };
+		C3236767190A183B00E53297 /* Langrisser2Opening.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C3236766190A183A00E53297 /* Langrisser2Opening.mp4 */; };
+		C323677F190A2B6700E53297 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C323677E190A2B6700E53297 /* MediaPlayer.framework */; };
+		C33F4B3E190B2B03005EF6E8 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = C33F4B3D190B2B03005EF6E8 /* Character.m */; };
+		C33F4B43190B2B19005EF6E8 /* gameConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C33F4B3F190B2B19005EF6E8 /* gameConstants.m */; };
+		C33F4B44190B2B19005EF6E8 /* MathUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C33F4B41190B2B19005EF6E8 /* MathUtil.m */; };
+		C33F4B48190B2C16005EF6E8 /* HelloWorldScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C33F4B47190B2C16005EF6E8 /* HelloWorldScene.m */; };
+		C33F4B4B190B2C3D005EF6E8 /* BattleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C33F4B4A190B2C3D005EF6E8 /* BattleScene.m */; };
+		C33F4BA4190C3B60005EF6E8 /* 艾尔文_轻骑兵.png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B4D190C3B60005EF6E8 /* 艾尔文_轻骑兵.png */; };
+		C33F4BA5190C3B60005EF6E8 /* 艾尔文_重骑兵.png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B4E190C3B60005EF6E8 /* 艾尔文_重骑兵.png */; };
+		C33F4BA6190C3B60005EF6E8 /* 3B人鱼战士(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B4F190C3B60005EF6E8 /* 3B人鱼战士(去底).png */; };
+		C33F4BA7190C3B60005EF6E8 /* 7D敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B50190C3B60005EF6E8 /* 7D敌武将(去底).png */; };
+		C33F4BA8190C3B60005EF6E8 /* 6F敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B51190C3B60005EF6E8 /* 6F敌武将(去底).png */; };
+		C33F4BA9190C3B60005EF6E8 /* 6D敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B52190C3B60005EF6E8 /* 6D敌武将(去底).png */; };
+		C33F4BAA190C3B60005EF6E8 /* 6B敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B53190C3B60005EF6E8 /* 6B敌武将(去底).png */; };
+		C33F4BAB190C3B60005EF6E8 /* 6A敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B54190C3B60005EF6E8 /* 6A敌武将(去底).png */; };
+		C33F4BAC190C3B60005EF6E8 /* 58魔狼人(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B55190C3B60005EF6E8 /* 58魔狼人(去底).png */; };
+		C33F4BAD190C3B60005EF6E8 /* 57魔石像鬼(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B56190C3B60005EF6E8 /* 57魔石像鬼(去底).png */; };
+		C33F4BAE190C3B60005EF6E8 /* 5E魔大恶魔(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B57190C3B60005EF6E8 /* 5E魔大恶魔(去底).png */; };
+		C33F4BAF190C3B60005EF6E8 /* 5B魔石巨人(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B58190C3B60005EF6E8 /* 5B魔石巨人(去底).png */; };
+		C33F4BB0190C3B60005EF6E8 /* DE我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B59190C3B60005EF6E8 /* DE我方(去底).png */; };
+		C33F4BB1190C3B60005EF6E8 /* DD我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B5A190C3B60005EF6E8 /* DD我方(去底).png */; };
+		C33F4BB2190C3B60005EF6E8 /* DC我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B5B190C3B60005EF6E8 /* DC我方(去底).png */; };
+		C33F4BB3190C3B60005EF6E8 /* D6我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B5C190C3B60005EF6E8 /* D6我方(去底).png */; };
+		C33F4BB4190C3B60005EF6E8 /* CF我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B5D190C3B60005EF6E8 /* CF我方(去底).png */; };
+		C33F4BB5190C3B60005EF6E8 /* CE我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B5E190C3B60005EF6E8 /* CE我方(去底).png */; };
+		C33F4BB6190C3B60005EF6E8 /* CD我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B5F190C3B60005EF6E8 /* CD我方(去底).png */; };
+		C33F4BB7190C3B60005EF6E8 /* C8我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B60190C3B60005EF6E8 /* C8我方(去底).png */; };
+		C33F4BB8190C3B60005EF6E8 /* C7我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B61190C3B60005EF6E8 /* C7我方(去底).png */; };
+		C33F4BB9190C3B60005EF6E8 /* C6我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B62190C3B60005EF6E8 /* C6我方(去底).png */; };
+		C33F4BBA190C3B60005EF6E8 /* C5我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B63190C3B60005EF6E8 /* C5我方(去底).png */; };
+		C33F4BBB190C3B60005EF6E8 /* C4我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B64190C3B60005EF6E8 /* C4我方(去底).png */; };
+		C33F4BBC190C3B60005EF6E8 /* BF我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B65190C3B60005EF6E8 /* BF我方(去底).png */; };
+		C33F4BBD190C3B60005EF6E8 /* BD我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B66190C3B60005EF6E8 /* BD我方(去底).png */; };
+		C33F4BBE190C3B60005EF6E8 /* BB我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B67190C3B60005EF6E8 /* BB我方(去底).png */; };
+		C33F4BBF190C3B60005EF6E8 /* B9我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B68190C3B60005EF6E8 /* B9我方(去底).png */; };
+		C33F4BC0190C3B60005EF6E8 /* B8我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B69190C3B60005EF6E8 /* B8我方(去底).png */; };
+		C33F4BC1190C3B60005EF6E8 /* B7我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B6A190C3B60005EF6E8 /* B7我方(去底).png */; };
+		C33F4BC2190C3B60005EF6E8 /* B6我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B6B190C3B60005EF6E8 /* B6我方(去底).png */; };
+		C33F4BC3190C3B60005EF6E8 /* B2我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B6C190C3B60005EF6E8 /* B2我方(去底).png */; };
+		C33F4BC4190C3B60005EF6E8 /* AC我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B6D190C3B60005EF6E8 /* AC我方(去底).png */; };
+		C33F4BC5190C3B60005EF6E8 /* A6我方(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B6E190C3B60005EF6E8 /* A6我方(去底).png */; };
+		C33F4BC6190C3B60005EF6E8 /* A0主角(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B6F190C3B60005EF6E8 /* A0主角(去底).png */; };
+		C33F4BC7190C3B60005EF6E8 /* 99武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B70190C3B60005EF6E8 /* 99武将(去底).png */; };
+		C33F4BC8190C3B60005EF6E8 /* 98武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B71190C3B60005EF6E8 /* 98武将(去底).png */; };
+		C33F4BC9190C3B60005EF6E8 /* 92敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B72190C3B60005EF6E8 /* 92敌武将(去底).png */; };
+		C33F4BCA190C3B60005EF6E8 /* 91敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B73190C3B60005EF6E8 /* 91敌武将(去底).png */; };
+		C33F4BCB190C3B60005EF6E8 /* 82敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B74190C3B60005EF6E8 /* 82敌武将(去底).png */; };
+		C33F4BCC190C3B60005EF6E8 /* 49敌狂战士(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B75190C3B60005EF6E8 /* 49敌狂战士(去底).png */; };
+		C33F4BCD190C3B60005EF6E8 /* 48敌重装步兵(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B76190C3B60005EF6E8 /* 48敌重装步兵(去底).png */; };
+		C33F4BCE190C3B60005EF6E8 /* 47敌步兵(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B77190C3B60005EF6E8 /* 47敌步兵(去底).png */; };
+		C33F4BCF190C3B60005EF6E8 /* 40芙蕾娅(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B78190C3B60005EF6E8 /* 40芙蕾娅(去底).png */; };
+		C33F4BD0190C3B60005EF6E8 /* 39僧侣(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B79190C3B60005EF6E8 /* 39僧侣(去底).png */; };
+		C33F4BD1190C3B60005EF6E8 /* 38弩车(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B7A190C3B60005EF6E8 /* 38弩车(去底).png */; };
+		C33F4BD2190C3B60005EF6E8 /* 37精灵射手(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B7B190C3B60005EF6E8 /* 37精灵射手(去底).png */; };
+		C33F4BD3190C3B60005EF6E8 /* 35重装骑兵(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B7C190C3B60005EF6E8 /* 35重装骑兵(去底).png */; };
+		C33F4BD4190C3B60005EF6E8 /* 34骑兵(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B7D190C3B60005EF6E8 /* 34骑兵(去底).png */; };
+		C33F4BD5190C3B60005EF6E8 /* 33重装步兵(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B7E190C3B60005EF6E8 /* 33重装步兵(去底).png */; };
+		C33F4BD6190C3B60005EF6E8 /* 32斗士(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B7F190C3B60005EF6E8 /* 32斗士(去底).png */; };
+		C33F4BD7190C3B60005EF6E8 /* 31步兵(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B80190C3B60005EF6E8 /* 31步兵(去底).png */; };
+		C33F4BD8190C3B60005EF6E8 /* 30重装枪兵(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B81190C3B60005EF6E8 /* 30重装枪兵(去底).png */; };
+		C33F4BD9190C3B60005EF6E8 /* 7F敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B82190C3B60005EF6E8 /* 7F敌武将(去底).png */; };
+		C33F4BDA190C3B60005EF6E8 /* 7E敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B83190C3B60005EF6E8 /* 7E敌武将(去底).png */; };
+		C33F4BDB190C3B60005EF6E8 /* 里昂_重骑兵.png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B84190C3B60005EF6E8 /* 里昂_重骑兵.png */; };
+		C33F4BDC190C3B60005EF6E8 /* 7A敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B85190C3B60005EF6E8 /* 7A敌武将(去底).png */; };
+		C33F4BDD190C3B60005EF6E8 /* 78敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B86190C3B60005EF6E8 /* 78敌武将(去底).png */; };
+		C33F4BDE190C3B60005EF6E8 /* 77敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B87190C3B60005EF6E8 /* 77敌武将(去底).png */; };
+		C33F4BDF190C3B60005EF6E8 /* 76敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B88190C3B60005EF6E8 /* 76敌武将(去底).png */; };
+		C33F4BE0190C3B60005EF6E8 /* 72敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B89190C3B60005EF6E8 /* 72敌武将(去底).png */; };
+		C33F4BE1190C3B60005EF6E8 /* 71敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B8A190C3B60005EF6E8 /* 71敌武将(去底).png */; };
+		C33F4BE2190C3B60005EF6E8 /* 69敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B8B190C3B60005EF6E8 /* 69敌武将(去底).png */; };
+		C33F4BE3190C3B60005EF6E8 /* 66敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B8C190C3B60005EF6E8 /* 66敌武将(去底).png */; };
+		C33F4BE4190C3B60005EF6E8 /* 65敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B8D190C3B60005EF6E8 /* 65敌武将(去底).png */; };
+		C33F4BE5190C3B60005EF6E8 /* 62敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B8E190C3B60005EF6E8 /* 62敌武将(去底).png */; };
+		C33F4BE6190C3B60005EF6E8 /* 59魔骨龙(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B8F190C3B60005EF6E8 /* 59魔骨龙(去底).png */; };
+		C33F4BE7190C3B60005EF6E8 /* 56魔僵尸(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B90190C3B60005EF6E8 /* 56魔僵尸(去底).png */; };
+		C33F4BE8190C3B60005EF6E8 /* 55魔骷髅兵(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B91190C3B60005EF6E8 /* 55魔骷髅兵(去底).png */; };
+		C33F4BE9190C3B60005EF6E8 /* 54敌重装枪兵(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B92190C3B60005EF6E8 /* 54敌重装枪兵(去底).png */; };
+		C33F4BEA190C3B60005EF6E8 /* 53敌枪兵(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B93190C3B60005EF6E8 /* 53敌枪兵(去底).png */; };
+		C33F4BEB190C3B60005EF6E8 /* 52敌狮鹫(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B94190C3B60005EF6E8 /* 52敌狮鹫(去底).png */; };
+		C33F4BEC190C3B60005EF6E8 /* 51敌暗黑卫队(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B95190C3B60005EF6E8 /* 51敌暗黑卫队(去底).png */; };
+		C33F4BED190C3B60005EF6E8 /* 50敌皇家骑兵(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B96190C3B60005EF6E8 /* 50敌皇家骑兵(去底).png */; };
+		C33F4BEE190C3B60005EF6E8 /* 5A魔巨海兽(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B97190C3B60005EF6E8 /* 5A魔巨海兽(去底).png */; };
+		C33F4BEF190C3B60005EF6E8 /* 4F敌重装骑兵(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B98190C3B60005EF6E8 /* 4F敌重装骑兵(去底).png */; };
+		C33F4BF0190C3B60005EF6E8 /* 4E敌骑兵(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B99190C3B60005EF6E8 /* 4E敌骑兵(去底).png */; };
+		C33F4BF1190C3B60005EF6E8 /* 4D敌蜥蜴人(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B9A190C3B60005EF6E8 /* 4D敌蜥蜴人(去底).png */; };
+		C33F4BF2190C3B60005EF6E8 /* 4C敌投石器(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B9B190C3B60005EF6E8 /* 4C敌投石器(去底).png */; };
+		C33F4BF3190C3B60005EF6E8 /* 4B敌暗黑精灵(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B9C190C3B60005EF6E8 /* 4B敌暗黑精灵(去底).png */; };
+		C33F4BF4190C3B60005EF6E8 /* 4A敌蛮族(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B9D190C3B60005EF6E8 /* 4A敌蛮族(去底).png */; };
+		C33F4BF5190C3B60005EF6E8 /* 3E市民(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B9E190C3B60005EF6E8 /* 3E市民(去底).png */; };
+		C33F4BF6190C3B60005EF6E8 /* 3D天使(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4B9F190C3B60005EF6E8 /* 3D天使(去底).png */; };
+		C33F4BF7190C3B60005EF6E8 /* 3A卫兵(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4BA0190C3B60005EF6E8 /* 3A卫兵(去底).png */; };
+		C33F4BF8190C3B60005EF6E8 /* 2F枪兵(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4BA1190C3B60005EF6E8 /* 2F枪兵(去底).png */; };
+		C33F4BF9190C3B60005EF6E8 /* 7B敌武将(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4BA2190C3B60005EF6E8 /* 7B敌武将(去底).png */; };
+		C33F4BFA190C3B60005EF6E8 /* 3C狮鹫(去底).png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4BA3190C3B60005EF6E8 /* 3C狮鹫(去底).png */; };
+		C33F4BFD190C47C3005EF6E8 /* battle_background_grass.png in Resources */ = {isa = PBXBuildFile; fileRef = C33F4BFC190C47C3005EF6E8 /* battle_background_grass.png */; };
 		C3A07B15190493AF00C99426 /* Langrisser2.png in Resources */ = {isa = PBXBuildFile; fileRef = C3A07B14190493AF00C99426 /* Langrisser2.png */; };
 		C3CF46AF19048702003AB73C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CF46AE19048702003AB73C /* QuartzCore.framework */; };
 		C3CF46B119048702003AB73C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CF46B019048702003AB73C /* OpenGLES.framework */; };
@@ -231,7 +323,6 @@
 		C3CF495019048707003AB73C /* LICENSE_Chipmunk.txt in Resources */ = {isa = PBXBuildFile; fileRef = C3CF494F19048707003AB73C /* LICENSE_Chipmunk.txt */; };
 		C3CF495419048708003AB73C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CF495319048708003AB73C /* main.m */; };
 		C3CF495819048708003AB73C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CF495719048708003AB73C /* AppDelegate.m */; };
-		C3CF495B19048708003AB73C /* HelloWorldScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CF495A19048708003AB73C /* HelloWorldScene.m */; };
 		C3CF495E19048708003AB73C /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CF495D19048708003AB73C /* IntroScene.m */; };
 		C3CF496A19048892003AB73C /* langrissa.png in Resources */ = {isa = PBXBuildFile; fileRef = C3CF496919048892003AB73C /* langrissa.png */; };
 /* End PBXBuildFile section */
@@ -247,14 +338,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C323670E19049DF600E53297 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
-		C323670F19049DF600E53297 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
-		C32367111904BBAD00E53297 /* gameConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gameConstants.h; path = Classes/gameConstants.h; sourceTree = "<group>"; };
-		C32367121904BBAD00E53297 /* gameConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = gameConstants.m; path = Classes/gameConstants.m; sourceTree = "<group>"; };
-		C32367141904D01500E53297 /* MathUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathUtil.h; path = Classes/MathUtil.h; sourceTree = "<group>"; };
-		C32367151904D01500E53297 /* MathUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathUtil.m; path = Classes/MathUtil.m; sourceTree = "<group>"; };
 		C32367181905D4AD00E53297 /* Stage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stage1.png; path = Resources/StageMaps/Stage1.png; sourceTree = "<group>"; };
-		C323671F1906244100E53297 /* leon_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = leon_icon.gif; path = Resources/AvatarIcons/leon_icon.gif; sourceTree = "<group>"; };
+		C323671F1906244100E53297 /* 里昂_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "里昂_icon.gif"; path = "Resources/AvatarIcons/里昂_icon.gif"; sourceTree = "<group>"; };
 		C32367201906244100E53297 /* jessica_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = jessica_icon.gif; path = Resources/AvatarIcons/jessica_icon.gif; sourceTree = "<group>"; };
 		C32367211906244100E53297 /* lana_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = lana_icon.gif; path = Resources/AvatarIcons/lana_icon.gif; sourceTree = "<group>"; };
 		C32367221906244100E53297 /* riana_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = riana_icon.gif; path = Resources/AvatarIcons/riana_icon.gif; sourceTree = "<group>"; };
@@ -263,13 +348,113 @@
 		C32367251906244100E53297 /* aaron_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = aaron_icon.gif; path = Resources/AvatarIcons/aaron_icon.gif; sourceTree = "<group>"; };
 		C32367261906244100E53297 /* shelly_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = shelly_icon.gif; path = Resources/AvatarIcons/shelly_icon.gif; sourceTree = "<group>"; };
 		C32367271906244100E53297 /* scott_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = scott_icon.gif; path = Resources/AvatarIcons/scott_icon.gif; sourceTree = "<group>"; };
-		C32367281906244100E53297 /* hain_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = hain_icon.gif; path = Resources/AvatarIcons/hain_icon.gif; sourceTree = "<group>"; };
+		C32367281906244100E53297 /* 海因_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "海因_icon.gif"; path = "Resources/AvatarIcons/海因_icon.gif"; sourceTree = "<group>"; };
 		C32367291906244100E53297 /* 艾尔文_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "艾尔文_icon.gif"; path = "Resources/AvatarIcons/艾尔文_icon.gif"; sourceTree = "<group>"; };
 		C32367361906435D00E53297 /* conversationBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = conversationBox.png; path = Resources/widgets/conversationBox.png; sourceTree = "<group>"; };
 		C32367371906435D00E53297 /* conversationNameBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = conversationNameBox.png; path = Resources/widgets/conversationNameBox.png; sourceTree = "<group>"; };
 		C323673A1906593100E53297 /* KnightsErrant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = KnightsErrant.mp3; path = Resources/BGMs/KnightsErrant.mp3; sourceTree = "<group>"; };
 		C323673C19065C3600E53297 /* openning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = openning.mp3; path = Resources/BGMs/openning.mp3; sourceTree = "<group>"; };
 		C323675E1909023D00E53297 /* conversations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = conversations.plist; path = Resources/conversationTextPlists/conversations.plist; sourceTree = "<group>"; };
+		C3236766190A183A00E53297 /* Langrisser2Opening.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Langrisser2Opening.mp4; path = Resources/Langrisser2Opening.mp4; sourceTree = "<group>"; };
+		C323677E190A2B6700E53297 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C33F4B3C190B2B03005EF6E8 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Character.h; path = Classes/units/Character.h; sourceTree = "<group>"; };
+		C33F4B3D190B2B03005EF6E8 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Character.m; path = Classes/units/Character.m; sourceTree = "<group>"; };
+		C33F4B3F190B2B19005EF6E8 /* gameConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = gameConstants.m; path = Classes/utils/gameConstants.m; sourceTree = "<group>"; };
+		C33F4B40190B2B19005EF6E8 /* MathUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathUtil.h; path = Classes/utils/MathUtil.h; sourceTree = "<group>"; };
+		C33F4B41190B2B19005EF6E8 /* MathUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathUtil.m; path = Classes/utils/MathUtil.m; sourceTree = "<group>"; };
+		C33F4B42190B2B19005EF6E8 /* gameConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gameConstants.h; path = Classes/utils/gameConstants.h; sourceTree = "<group>"; };
+		C33F4B46190B2C16005EF6E8 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/scene/HelloWorldScene.h; sourceTree = "<group>"; };
+		C33F4B47190B2C16005EF6E8 /* HelloWorldScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelloWorldScene.m; path = Classes/scene/HelloWorldScene.m; sourceTree = "<group>"; };
+		C33F4B49190B2C3D005EF6E8 /* BattleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BattleScene.h; path = Classes/scene/BattleScene.h; sourceTree = "<group>"; };
+		C33F4B4A190B2C3D005EF6E8 /* BattleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BattleScene.m; path = Classes/scene/BattleScene.m; sourceTree = "<group>"; };
+		C33F4B4D190C3B60005EF6E8 /* 艾尔文_轻骑兵.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "艾尔文_轻骑兵.png"; path = "Resources/fightingSprite/艾尔文_轻骑兵.png"; sourceTree = "<group>"; };
+		C33F4B4E190C3B60005EF6E8 /* 艾尔文_重骑兵.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "艾尔文_重骑兵.png"; path = "Resources/fightingSprite/艾尔文_重骑兵.png"; sourceTree = "<group>"; };
+		C33F4B4F190C3B60005EF6E8 /* 3B人鱼战士(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "3B人鱼战士(去底).png"; path = "Resources/fightingSprite/3B人鱼战士(去底).png"; sourceTree = "<group>"; };
+		C33F4B50190C3B60005EF6E8 /* 7D敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "7D敌武将(去底).png"; path = "Resources/fightingSprite/7D敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B51190C3B60005EF6E8 /* 6F敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "6F敌武将(去底).png"; path = "Resources/fightingSprite/6F敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B52190C3B60005EF6E8 /* 6D敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "6D敌武将(去底).png"; path = "Resources/fightingSprite/6D敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B53190C3B60005EF6E8 /* 6B敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "6B敌武将(去底).png"; path = "Resources/fightingSprite/6B敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B54190C3B60005EF6E8 /* 6A敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "6A敌武将(去底).png"; path = "Resources/fightingSprite/6A敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B55190C3B60005EF6E8 /* 58魔狼人(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "58魔狼人(去底).png"; path = "Resources/fightingSprite/58魔狼人(去底).png"; sourceTree = "<group>"; };
+		C33F4B56190C3B60005EF6E8 /* 57魔石像鬼(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "57魔石像鬼(去底).png"; path = "Resources/fightingSprite/57魔石像鬼(去底).png"; sourceTree = "<group>"; };
+		C33F4B57190C3B60005EF6E8 /* 5E魔大恶魔(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "5E魔大恶魔(去底).png"; path = "Resources/fightingSprite/5E魔大恶魔(去底).png"; sourceTree = "<group>"; };
+		C33F4B58190C3B60005EF6E8 /* 5B魔石巨人(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "5B魔石巨人(去底).png"; path = "Resources/fightingSprite/5B魔石巨人(去底).png"; sourceTree = "<group>"; };
+		C33F4B59190C3B60005EF6E8 /* DE我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DE我方(去底).png"; path = "Resources/fightingSprite/DE我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B5A190C3B60005EF6E8 /* DD我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DD我方(去底).png"; path = "Resources/fightingSprite/DD我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B5B190C3B60005EF6E8 /* DC我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "DC我方(去底).png"; path = "Resources/fightingSprite/DC我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B5C190C3B60005EF6E8 /* D6我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "D6我方(去底).png"; path = "Resources/fightingSprite/D6我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B5D190C3B60005EF6E8 /* CF我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CF我方(去底).png"; path = "Resources/fightingSprite/CF我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B5E190C3B60005EF6E8 /* CE我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CE我方(去底).png"; path = "Resources/fightingSprite/CE我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B5F190C3B60005EF6E8 /* CD我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CD我方(去底).png"; path = "Resources/fightingSprite/CD我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B60190C3B60005EF6E8 /* C8我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "C8我方(去底).png"; path = "Resources/fightingSprite/C8我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B61190C3B60005EF6E8 /* C7我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "C7我方(去底).png"; path = "Resources/fightingSprite/C7我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B62190C3B60005EF6E8 /* C6我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "C6我方(去底).png"; path = "Resources/fightingSprite/C6我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B63190C3B60005EF6E8 /* C5我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "C5我方(去底).png"; path = "Resources/fightingSprite/C5我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B64190C3B60005EF6E8 /* C4我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "C4我方(去底).png"; path = "Resources/fightingSprite/C4我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B65190C3B60005EF6E8 /* BF我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BF我方(去底).png"; path = "Resources/fightingSprite/BF我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B66190C3B60005EF6E8 /* BD我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BD我方(去底).png"; path = "Resources/fightingSprite/BD我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B67190C3B60005EF6E8 /* BB我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BB我方(去底).png"; path = "Resources/fightingSprite/BB我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B68190C3B60005EF6E8 /* B9我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "B9我方(去底).png"; path = "Resources/fightingSprite/B9我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B69190C3B60005EF6E8 /* B8我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "B8我方(去底).png"; path = "Resources/fightingSprite/B8我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B6A190C3B60005EF6E8 /* B7我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "B7我方(去底).png"; path = "Resources/fightingSprite/B7我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B6B190C3B60005EF6E8 /* B6我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "B6我方(去底).png"; path = "Resources/fightingSprite/B6我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B6C190C3B60005EF6E8 /* B2我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "B2我方(去底).png"; path = "Resources/fightingSprite/B2我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B6D190C3B60005EF6E8 /* AC我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AC我方(去底).png"; path = "Resources/fightingSprite/AC我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B6E190C3B60005EF6E8 /* A6我方(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "A6我方(去底).png"; path = "Resources/fightingSprite/A6我方(去底).png"; sourceTree = "<group>"; };
+		C33F4B6F190C3B60005EF6E8 /* A0主角(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "A0主角(去底).png"; path = "Resources/fightingSprite/A0主角(去底).png"; sourceTree = "<group>"; };
+		C33F4B70190C3B60005EF6E8 /* 99武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "99武将(去底).png"; path = "Resources/fightingSprite/99武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B71190C3B60005EF6E8 /* 98武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "98武将(去底).png"; path = "Resources/fightingSprite/98武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B72190C3B60005EF6E8 /* 92敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "92敌武将(去底).png"; path = "Resources/fightingSprite/92敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B73190C3B60005EF6E8 /* 91敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "91敌武将(去底).png"; path = "Resources/fightingSprite/91敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B74190C3B60005EF6E8 /* 82敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "82敌武将(去底).png"; path = "Resources/fightingSprite/82敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B75190C3B60005EF6E8 /* 49敌狂战士(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "49敌狂战士(去底).png"; path = "Resources/fightingSprite/49敌狂战士(去底).png"; sourceTree = "<group>"; };
+		C33F4B76190C3B60005EF6E8 /* 48敌重装步兵(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "48敌重装步兵(去底).png"; path = "Resources/fightingSprite/48敌重装步兵(去底).png"; sourceTree = "<group>"; };
+		C33F4B77190C3B60005EF6E8 /* 47敌步兵(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "47敌步兵(去底).png"; path = "Resources/fightingSprite/47敌步兵(去底).png"; sourceTree = "<group>"; };
+		C33F4B78190C3B60005EF6E8 /* 40芙蕾娅(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "40芙蕾娅(去底).png"; path = "Resources/fightingSprite/40芙蕾娅(去底).png"; sourceTree = "<group>"; };
+		C33F4B79190C3B60005EF6E8 /* 39僧侣(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "39僧侣(去底).png"; path = "Resources/fightingSprite/39僧侣(去底).png"; sourceTree = "<group>"; };
+		C33F4B7A190C3B60005EF6E8 /* 38弩车(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "38弩车(去底).png"; path = "Resources/fightingSprite/38弩车(去底).png"; sourceTree = "<group>"; };
+		C33F4B7B190C3B60005EF6E8 /* 37精灵射手(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "37精灵射手(去底).png"; path = "Resources/fightingSprite/37精灵射手(去底).png"; sourceTree = "<group>"; };
+		C33F4B7C190C3B60005EF6E8 /* 35重装骑兵(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "35重装骑兵(去底).png"; path = "Resources/fightingSprite/35重装骑兵(去底).png"; sourceTree = "<group>"; };
+		C33F4B7D190C3B60005EF6E8 /* 34骑兵(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "34骑兵(去底).png"; path = "Resources/fightingSprite/34骑兵(去底).png"; sourceTree = "<group>"; };
+		C33F4B7E190C3B60005EF6E8 /* 33重装步兵(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "33重装步兵(去底).png"; path = "Resources/fightingSprite/33重装步兵(去底).png"; sourceTree = "<group>"; };
+		C33F4B7F190C3B60005EF6E8 /* 32斗士(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "32斗士(去底).png"; path = "Resources/fightingSprite/32斗士(去底).png"; sourceTree = "<group>"; };
+		C33F4B80190C3B60005EF6E8 /* 31步兵(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "31步兵(去底).png"; path = "Resources/fightingSprite/31步兵(去底).png"; sourceTree = "<group>"; };
+		C33F4B81190C3B60005EF6E8 /* 30重装枪兵(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "30重装枪兵(去底).png"; path = "Resources/fightingSprite/30重装枪兵(去底).png"; sourceTree = "<group>"; };
+		C33F4B82190C3B60005EF6E8 /* 7F敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "7F敌武将(去底).png"; path = "Resources/fightingSprite/7F敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B83190C3B60005EF6E8 /* 7E敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "7E敌武将(去底).png"; path = "Resources/fightingSprite/7E敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B84190C3B60005EF6E8 /* 里昂_重骑兵.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "里昂_重骑兵.png"; path = "Resources/fightingSprite/里昂_重骑兵.png"; sourceTree = "<group>"; };
+		C33F4B85190C3B60005EF6E8 /* 7A敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "7A敌武将(去底).png"; path = "Resources/fightingSprite/7A敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B86190C3B60005EF6E8 /* 78敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "78敌武将(去底).png"; path = "Resources/fightingSprite/78敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B87190C3B60005EF6E8 /* 77敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "77敌武将(去底).png"; path = "Resources/fightingSprite/77敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B88190C3B60005EF6E8 /* 76敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "76敌武将(去底).png"; path = "Resources/fightingSprite/76敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B89190C3B60005EF6E8 /* 72敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "72敌武将(去底).png"; path = "Resources/fightingSprite/72敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B8A190C3B60005EF6E8 /* 71敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "71敌武将(去底).png"; path = "Resources/fightingSprite/71敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B8B190C3B60005EF6E8 /* 69敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "69敌武将(去底).png"; path = "Resources/fightingSprite/69敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B8C190C3B60005EF6E8 /* 66敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "66敌武将(去底).png"; path = "Resources/fightingSprite/66敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B8D190C3B60005EF6E8 /* 65敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "65敌武将(去底).png"; path = "Resources/fightingSprite/65敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B8E190C3B60005EF6E8 /* 62敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "62敌武将(去底).png"; path = "Resources/fightingSprite/62敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4B8F190C3B60005EF6E8 /* 59魔骨龙(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "59魔骨龙(去底).png"; path = "Resources/fightingSprite/59魔骨龙(去底).png"; sourceTree = "<group>"; };
+		C33F4B90190C3B60005EF6E8 /* 56魔僵尸(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "56魔僵尸(去底).png"; path = "Resources/fightingSprite/56魔僵尸(去底).png"; sourceTree = "<group>"; };
+		C33F4B91190C3B60005EF6E8 /* 55魔骷髅兵(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "55魔骷髅兵(去底).png"; path = "Resources/fightingSprite/55魔骷髅兵(去底).png"; sourceTree = "<group>"; };
+		C33F4B92190C3B60005EF6E8 /* 54敌重装枪兵(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "54敌重装枪兵(去底).png"; path = "Resources/fightingSprite/54敌重装枪兵(去底).png"; sourceTree = "<group>"; };
+		C33F4B93190C3B60005EF6E8 /* 53敌枪兵(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "53敌枪兵(去底).png"; path = "Resources/fightingSprite/53敌枪兵(去底).png"; sourceTree = "<group>"; };
+		C33F4B94190C3B60005EF6E8 /* 52敌狮鹫(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "52敌狮鹫(去底).png"; path = "Resources/fightingSprite/52敌狮鹫(去底).png"; sourceTree = "<group>"; };
+		C33F4B95190C3B60005EF6E8 /* 51敌暗黑卫队(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "51敌暗黑卫队(去底).png"; path = "Resources/fightingSprite/51敌暗黑卫队(去底).png"; sourceTree = "<group>"; };
+		C33F4B96190C3B60005EF6E8 /* 50敌皇家骑兵(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "50敌皇家骑兵(去底).png"; path = "Resources/fightingSprite/50敌皇家骑兵(去底).png"; sourceTree = "<group>"; };
+		C33F4B97190C3B60005EF6E8 /* 5A魔巨海兽(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "5A魔巨海兽(去底).png"; path = "Resources/fightingSprite/5A魔巨海兽(去底).png"; sourceTree = "<group>"; };
+		C33F4B98190C3B60005EF6E8 /* 4F敌重装骑兵(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "4F敌重装骑兵(去底).png"; path = "Resources/fightingSprite/4F敌重装骑兵(去底).png"; sourceTree = "<group>"; };
+		C33F4B99190C3B60005EF6E8 /* 4E敌骑兵(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "4E敌骑兵(去底).png"; path = "Resources/fightingSprite/4E敌骑兵(去底).png"; sourceTree = "<group>"; };
+		C33F4B9A190C3B60005EF6E8 /* 4D敌蜥蜴人(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "4D敌蜥蜴人(去底).png"; path = "Resources/fightingSprite/4D敌蜥蜴人(去底).png"; sourceTree = "<group>"; };
+		C33F4B9B190C3B60005EF6E8 /* 4C敌投石器(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "4C敌投石器(去底).png"; path = "Resources/fightingSprite/4C敌投石器(去底).png"; sourceTree = "<group>"; };
+		C33F4B9C190C3B60005EF6E8 /* 4B敌暗黑精灵(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "4B敌暗黑精灵(去底).png"; path = "Resources/fightingSprite/4B敌暗黑精灵(去底).png"; sourceTree = "<group>"; };
+		C33F4B9D190C3B60005EF6E8 /* 4A敌蛮族(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "4A敌蛮族(去底).png"; path = "Resources/fightingSprite/4A敌蛮族(去底).png"; sourceTree = "<group>"; };
+		C33F4B9E190C3B60005EF6E8 /* 3E市民(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "3E市民(去底).png"; path = "Resources/fightingSprite/3E市民(去底).png"; sourceTree = "<group>"; };
+		C33F4B9F190C3B60005EF6E8 /* 3D天使(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "3D天使(去底).png"; path = "Resources/fightingSprite/3D天使(去底).png"; sourceTree = "<group>"; };
+		C33F4BA0190C3B60005EF6E8 /* 3A卫兵(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "3A卫兵(去底).png"; path = "Resources/fightingSprite/3A卫兵(去底).png"; sourceTree = "<group>"; };
+		C33F4BA1190C3B60005EF6E8 /* 2F枪兵(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "2F枪兵(去底).png"; path = "Resources/fightingSprite/2F枪兵(去底).png"; sourceTree = "<group>"; };
+		C33F4BA2190C3B60005EF6E8 /* 7B敌武将(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "7B敌武将(去底).png"; path = "Resources/fightingSprite/7B敌武将(去底).png"; sourceTree = "<group>"; };
+		C33F4BA3190C3B60005EF6E8 /* 3C狮鹫(去底).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "3C狮鹫(去底).png"; path = "Resources/fightingSprite/3C狮鹫(去底).png"; sourceTree = "<group>"; };
+		C33F4BFC190C47C3005EF6E8 /* battle_background_grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = battle_background_grass.png; path = Resources/battleBackground/battle_background_grass.png; sourceTree = "<group>"; };
 		C3A07B14190493AF00C99426 /* Langrisser2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Langrisser2.png; path = Resources/sprites/Langrisser2.png; sourceTree = "<group>"; };
 		C3CF46AB19048702003AB73C /* emblemKnight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emblemKnight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CF46AE19048702003AB73C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -695,8 +880,6 @@
 		C3CF495319048708003AB73C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
 		C3CF495619048708003AB73C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		C3CF495719048708003AB73C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		C3CF495919048708003AB73C /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
-		C3CF495A19048708003AB73C /* HelloWorldScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HelloWorldScene.m; path = Classes/HelloWorldScene.m; sourceTree = "<group>"; };
 		C3CF495C19048708003AB73C /* IntroScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IntroScene.h; path = Classes/IntroScene.h; sourceTree = "<group>"; };
 		C3CF495D19048708003AB73C /* IntroScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IntroScene.m; path = Classes/IntroScene.m; sourceTree = "<group>"; };
 		C3CF496919048892003AB73C /* langrissa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = langrissa.png; path = Resources/sprites/langrissa.png; sourceTree = "<group>"; };
@@ -707,6 +890,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C323677F190A2B6700E53297 /* MediaPlayer.framework in Frameworks */,
 				C3CF46C519048702003AB73C /* libObjectiveChipmunk.a in Frameworks */,
 				C3CF46B319048702003AB73C /* OpenAL.framework in Frameworks */,
 				C3CF46B919048702003AB73C /* UIKit.framework in Frameworks */,
@@ -734,10 +918,10 @@
 		C323671A1905E68B00E53297 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				C32367111904BBAD00E53297 /* gameConstants.h */,
-				C32367121904BBAD00E53297 /* gameConstants.m */,
-				C32367141904D01500E53297 /* MathUtil.h */,
-				C32367151904D01500E53297 /* MathUtil.m */,
+				C33F4B42190B2B19005EF6E8 /* gameConstants.h */,
+				C33F4B3F190B2B19005EF6E8 /* gameConstants.m */,
+				C33F4B40190B2B19005EF6E8 /* MathUtil.h */,
+				C33F4B41190B2B19005EF6E8 /* MathUtil.m */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -745,7 +929,7 @@
 		C323671E190623C200E53297 /* AvatarIcons */ = {
 			isa = PBXGroup;
 			children = (
-				C323671F1906244100E53297 /* leon_icon.gif */,
+				C323671F1906244100E53297 /* 里昂_icon.gif */,
 				C32367201906244100E53297 /* jessica_icon.gif */,
 				C32367211906244100E53297 /* lana_icon.gif */,
 				C32367221906244100E53297 /* riana_icon.gif */,
@@ -754,7 +938,7 @@
 				C32367251906244100E53297 /* aaron_icon.gif */,
 				C32367261906244100E53297 /* shelly_icon.gif */,
 				C32367271906244100E53297 /* scott_icon.gif */,
-				C32367281906244100E53297 /* hain_icon.gif */,
+				C32367281906244100E53297 /* 海因_icon.gif */,
 				C32367291906244100E53297 /* 艾尔文_icon.gif */,
 			);
 			name = AvatarIcons;
@@ -775,6 +959,128 @@
 				C323675E1909023D00E53297 /* conversations.plist */,
 			);
 			name = conversationTextPlists;
+			sourceTree = "<group>";
+		};
+		C33F4B3B190B2A15005EF6E8 /* units */ = {
+			isa = PBXGroup;
+			children = (
+				C33F4B3C190B2B03005EF6E8 /* Character.h */,
+				C33F4B3D190B2B03005EF6E8 /* Character.m */,
+			);
+			name = units;
+			sourceTree = "<group>";
+		};
+		C33F4B45190B2B2A005EF6E8 /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				C33F4B46190B2C16005EF6E8 /* HelloWorldScene.h */,
+				C33F4B47190B2C16005EF6E8 /* HelloWorldScene.m */,
+				C33F4B49190B2C3D005EF6E8 /* BattleScene.h */,
+				C33F4B4A190B2C3D005EF6E8 /* BattleScene.m */,
+			);
+			name = scene;
+			sourceTree = "<group>";
+		};
+		C33F4B4C190B4372005EF6E8 /* fightingSprite */ = {
+			isa = PBXGroup;
+			children = (
+				C33F4B4D190C3B60005EF6E8 /* 艾尔文_轻骑兵.png */,
+				C33F4B4E190C3B60005EF6E8 /* 艾尔文_重骑兵.png */,
+				C33F4B4F190C3B60005EF6E8 /* 3B人鱼战士(去底).png */,
+				C33F4B50190C3B60005EF6E8 /* 7D敌武将(去底).png */,
+				C33F4B51190C3B60005EF6E8 /* 6F敌武将(去底).png */,
+				C33F4B52190C3B60005EF6E8 /* 6D敌武将(去底).png */,
+				C33F4B53190C3B60005EF6E8 /* 6B敌武将(去底).png */,
+				C33F4B54190C3B60005EF6E8 /* 6A敌武将(去底).png */,
+				C33F4B55190C3B60005EF6E8 /* 58魔狼人(去底).png */,
+				C33F4B56190C3B60005EF6E8 /* 57魔石像鬼(去底).png */,
+				C33F4B57190C3B60005EF6E8 /* 5E魔大恶魔(去底).png */,
+				C33F4B58190C3B60005EF6E8 /* 5B魔石巨人(去底).png */,
+				C33F4B59190C3B60005EF6E8 /* DE我方(去底).png */,
+				C33F4B5A190C3B60005EF6E8 /* DD我方(去底).png */,
+				C33F4B5B190C3B60005EF6E8 /* DC我方(去底).png */,
+				C33F4B5C190C3B60005EF6E8 /* D6我方(去底).png */,
+				C33F4B5D190C3B60005EF6E8 /* CF我方(去底).png */,
+				C33F4B5E190C3B60005EF6E8 /* CE我方(去底).png */,
+				C33F4B5F190C3B60005EF6E8 /* CD我方(去底).png */,
+				C33F4B60190C3B60005EF6E8 /* C8我方(去底).png */,
+				C33F4B61190C3B60005EF6E8 /* C7我方(去底).png */,
+				C33F4B62190C3B60005EF6E8 /* C6我方(去底).png */,
+				C33F4B63190C3B60005EF6E8 /* C5我方(去底).png */,
+				C33F4B64190C3B60005EF6E8 /* C4我方(去底).png */,
+				C33F4B65190C3B60005EF6E8 /* BF我方(去底).png */,
+				C33F4B66190C3B60005EF6E8 /* BD我方(去底).png */,
+				C33F4B67190C3B60005EF6E8 /* BB我方(去底).png */,
+				C33F4B68190C3B60005EF6E8 /* B9我方(去底).png */,
+				C33F4B69190C3B60005EF6E8 /* B8我方(去底).png */,
+				C33F4B6A190C3B60005EF6E8 /* B7我方(去底).png */,
+				C33F4B6B190C3B60005EF6E8 /* B6我方(去底).png */,
+				C33F4B6C190C3B60005EF6E8 /* B2我方(去底).png */,
+				C33F4B6D190C3B60005EF6E8 /* AC我方(去底).png */,
+				C33F4B6E190C3B60005EF6E8 /* A6我方(去底).png */,
+				C33F4B6F190C3B60005EF6E8 /* A0主角(去底).png */,
+				C33F4B70190C3B60005EF6E8 /* 99武将(去底).png */,
+				C33F4B71190C3B60005EF6E8 /* 98武将(去底).png */,
+				C33F4B72190C3B60005EF6E8 /* 92敌武将(去底).png */,
+				C33F4B73190C3B60005EF6E8 /* 91敌武将(去底).png */,
+				C33F4B74190C3B60005EF6E8 /* 82敌武将(去底).png */,
+				C33F4B75190C3B60005EF6E8 /* 49敌狂战士(去底).png */,
+				C33F4B76190C3B60005EF6E8 /* 48敌重装步兵(去底).png */,
+				C33F4B77190C3B60005EF6E8 /* 47敌步兵(去底).png */,
+				C33F4B78190C3B60005EF6E8 /* 40芙蕾娅(去底).png */,
+				C33F4B79190C3B60005EF6E8 /* 39僧侣(去底).png */,
+				C33F4B7A190C3B60005EF6E8 /* 38弩车(去底).png */,
+				C33F4B7B190C3B60005EF6E8 /* 37精灵射手(去底).png */,
+				C33F4B7C190C3B60005EF6E8 /* 35重装骑兵(去底).png */,
+				C33F4B7D190C3B60005EF6E8 /* 34骑兵(去底).png */,
+				C33F4B7E190C3B60005EF6E8 /* 33重装步兵(去底).png */,
+				C33F4B7F190C3B60005EF6E8 /* 32斗士(去底).png */,
+				C33F4B80190C3B60005EF6E8 /* 31步兵(去底).png */,
+				C33F4B81190C3B60005EF6E8 /* 30重装枪兵(去底).png */,
+				C33F4B82190C3B60005EF6E8 /* 7F敌武将(去底).png */,
+				C33F4B83190C3B60005EF6E8 /* 7E敌武将(去底).png */,
+				C33F4B84190C3B60005EF6E8 /* 里昂_重骑兵.png */,
+				C33F4B85190C3B60005EF6E8 /* 7A敌武将(去底).png */,
+				C33F4B86190C3B60005EF6E8 /* 78敌武将(去底).png */,
+				C33F4B87190C3B60005EF6E8 /* 77敌武将(去底).png */,
+				C33F4B88190C3B60005EF6E8 /* 76敌武将(去底).png */,
+				C33F4B89190C3B60005EF6E8 /* 72敌武将(去底).png */,
+				C33F4B8A190C3B60005EF6E8 /* 71敌武将(去底).png */,
+				C33F4B8B190C3B60005EF6E8 /* 69敌武将(去底).png */,
+				C33F4B8C190C3B60005EF6E8 /* 66敌武将(去底).png */,
+				C33F4B8D190C3B60005EF6E8 /* 65敌武将(去底).png */,
+				C33F4B8E190C3B60005EF6E8 /* 62敌武将(去底).png */,
+				C33F4B8F190C3B60005EF6E8 /* 59魔骨龙(去底).png */,
+				C33F4B90190C3B60005EF6E8 /* 56魔僵尸(去底).png */,
+				C33F4B91190C3B60005EF6E8 /* 55魔骷髅兵(去底).png */,
+				C33F4B92190C3B60005EF6E8 /* 54敌重装枪兵(去底).png */,
+				C33F4B93190C3B60005EF6E8 /* 53敌枪兵(去底).png */,
+				C33F4B94190C3B60005EF6E8 /* 52敌狮鹫(去底).png */,
+				C33F4B95190C3B60005EF6E8 /* 51敌暗黑卫队(去底).png */,
+				C33F4B96190C3B60005EF6E8 /* 50敌皇家骑兵(去底).png */,
+				C33F4B97190C3B60005EF6E8 /* 5A魔巨海兽(去底).png */,
+				C33F4B98190C3B60005EF6E8 /* 4F敌重装骑兵(去底).png */,
+				C33F4B99190C3B60005EF6E8 /* 4E敌骑兵(去底).png */,
+				C33F4B9A190C3B60005EF6E8 /* 4D敌蜥蜴人(去底).png */,
+				C33F4B9B190C3B60005EF6E8 /* 4C敌投石器(去底).png */,
+				C33F4B9C190C3B60005EF6E8 /* 4B敌暗黑精灵(去底).png */,
+				C33F4B9D190C3B60005EF6E8 /* 4A敌蛮族(去底).png */,
+				C33F4B9E190C3B60005EF6E8 /* 3E市民(去底).png */,
+				C33F4B9F190C3B60005EF6E8 /* 3D天使(去底).png */,
+				C33F4BA0190C3B60005EF6E8 /* 3A卫兵(去底).png */,
+				C33F4BA1190C3B60005EF6E8 /* 2F枪兵(去底).png */,
+				C33F4BA2190C3B60005EF6E8 /* 7B敌武将(去底).png */,
+				C33F4BA3190C3B60005EF6E8 /* 3C狮鹫(去底).png */,
+			);
+			name = fightingSprite;
+			sourceTree = "<group>";
+		};
+		C33F4BFB190C4791005EF6E8 /* battleBackground */ = {
+			isa = PBXGroup;
+			children = (
+				C33F4BFC190C47C3005EF6E8 /* battle_background_grass.png */,
+			);
+			name = battleBackground;
 			sourceTree = "<group>";
 		};
 		C3CF46A219048702003AB73C = {
@@ -798,6 +1104,7 @@
 		C3CF46AD19048702003AB73C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C323677E190A2B6700E53297 /* MediaPlayer.framework */,
 				C3CF46AE19048702003AB73C /* QuartzCore.framework */,
 				C3CF46B019048702003AB73C /* OpenGLES.framework */,
 				C3CF46B219048702003AB73C /* OpenAL.framework */,
@@ -825,6 +1132,9 @@
 		C3CF46C719048702003AB73C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C33F4BFB190C4791005EF6E8 /* battleBackground */,
+				C33F4B4C190B4372005EF6E8 /* fightingSprite */,
+				C3236766190A183A00E53297 /* Langrisser2Opening.mp4 */,
 				C323675D190901DA00E53297 /* conversationTextPlists */,
 				C32367351906434700E53297 /* widgets */,
 				C323671E190623C200E53297 /* AvatarIcons */,
@@ -1647,15 +1957,13 @@
 		C3CF495519048708003AB73C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C33F4B45190B2B2A005EF6E8 /* scene */,
+				C33F4B3B190B2A15005EF6E8 /* units */,
 				C323671A1905E68B00E53297 /* utils */,
 				C3CF495619048708003AB73C /* AppDelegate.h */,
 				C3CF495719048708003AB73C /* AppDelegate.m */,
-				C3CF495919048708003AB73C /* HelloWorldScene.h */,
-				C3CF495A19048708003AB73C /* HelloWorldScene.m */,
 				C3CF495C19048708003AB73C /* IntroScene.h */,
 				C3CF495D19048708003AB73C /* IntroScene.m */,
-				C323670E19049DF600E53297 /* Character.h */,
-				C323670F19049DF600E53297 /* Character.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1747,47 +2055,136 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3CF46CB19048702003AB73C /* Default@2x.png in Resources */,
+				C33F4BE4190C3B60005EF6E8 /* 65敌武将(去底).png in Resources */,
+				C33F4BBE190C3B60005EF6E8 /* BB我方(去底).png in Resources */,
 				C3CF46DE19048702003AB73C /* Icon-120.png in Resources */,
+				C33F4BB6190C3B60005EF6E8 /* CD我方(去底).png in Resources */,
 				C323672B1906244100E53297 /* jessica_icon.gif in Resources */,
+				C33F4BAE190C3B60005EF6E8 /* 5E魔大恶魔(去底).png in Resources */,
+				C33F4BC3190C3B60005EF6E8 /* B2我方(去底).png in Resources */,
+				C33F4BC6190C3B60005EF6E8 /* A0主角(去底).png in Resources */,
+				C33F4BEB190C3B60005EF6E8 /* 52敌狮鹫(去底).png in Resources */,
+				C33F4BE9190C3B60005EF6E8 /* 54敌重装枪兵(去底).png in Resources */,
+				C33F4BB9190C3B60005EF6E8 /* C6我方(去底).png in Resources */,
 				C3CF48E219048707003AB73C /* LICENSE_CCBReader.txt in Resources */,
-				C323672A1906244100E53297 /* leon_icon.gif in Resources */,
+				C33F4BA7190C3B60005EF6E8 /* 7D敌武将(去底).png in Resources */,
+				C33F4BF6190C3B60005EF6E8 /* 3D天使(去底).png in Resources */,
+				C33F4BBC190C3B60005EF6E8 /* BF我方(去底).png in Resources */,
+				C323672A1906244100E53297 /* 里昂_icon.gif in Resources */,
+				C33F4BDE190C3B60005EF6E8 /* 77敌武将(去底).png in Resources */,
+				C33F4BBD190C3B60005EF6E8 /* BD我方(去底).png in Resources */,
+				C33F4BCE190C3B60005EF6E8 /* 47敌步兵(去底).png in Resources */,
 				C323672D1906244100E53297 /* riana_icon.gif in Resources */,
+				C33F4BC0190C3B60005EF6E8 /* B8我方(去底).png in Resources */,
 				C3CF46D419048702003AB73C /* Icon@2x.png in Resources */,
+				C33F4BCC190C3B60005EF6E8 /* 49敌狂战士(去底).png in Resources */,
+				C33F4BB0190C3B60005EF6E8 /* DE我方(去底).png in Resources */,
 				C3CF46E619048702003AB73C /* Icon-Small@2x.png in Resources */,
+				C33F4BAC190C3B60005EF6E8 /* 58魔狼人(去底).png in Resources */,
+				C33F4BF2190C3B60005EF6E8 /* 4C敌投石器(去底).png in Resources */,
+				C33F4BDD190C3B60005EF6E8 /* 78敌武将(去底).png in Resources */,
+				C33F4BD5190C3B60005EF6E8 /* 33重装步兵(去底).png in Resources */,
 				C32367191905D4AD00E53297 /* Stage1.png in Resources */,
 				C3CF46D819048702003AB73C /* Icon-72@2x.png in Resources */,
+				C33F4BD2190C3B60005EF6E8 /* 37精灵射手(去底).png in Resources */,
+				C33F4BE7190C3B60005EF6E8 /* 56魔僵尸(去底).png in Resources */,
 				C323675F1909023D00E53297 /* conversations.plist in Resources */,
+				C33F4BC8190C3B60005EF6E8 /* 98武将(去底).png in Resources */,
+				C33F4BD8190C3B60005EF6E8 /* 30重装枪兵(去底).png in Resources */,
+				C33F4BA6190C3B60005EF6E8 /* 3B人鱼战士(去底).png in Resources */,
 				C323672E1906244100E53297 /* lester_icon.gif in Resources */,
+				C33F4BD7190C3B60005EF6E8 /* 31步兵(去底).png in Resources */,
+				C33F4BA4190C3B60005EF6E8 /* 艾尔文_轻骑兵.png in Resources */,
 				C3CF46C919048702003AB73C /* Default.png in Resources */,
+				C33F4BC1190C3B60005EF6E8 /* B7我方(去底).png in Resources */,
+				C33F4BAF190C3B60005EF6E8 /* 5B魔石巨人(去底).png in Resources */,
+				C33F4BD9190C3B60005EF6E8 /* 7F敌武将(去底).png in Resources */,
+				C33F4BF8190C3B60005EF6E8 /* 2F枪兵(去底).png in Resources */,
+				C33F4BE8190C3B60005EF6E8 /* 55魔骷髅兵(去底).png in Resources */,
 				C3CF46D219048702003AB73C /* Icon.png in Resources */,
+				C33F4BC7190C3B60005EF6E8 /* 99武将(去底).png in Resources */,
+				C33F4BF0190C3B60005EF6E8 /* 4E敌骑兵(去底).png in Resources */,
+				C33F4BD4190C3B60005EF6E8 /* 34骑兵(去底).png in Resources */,
 				C3CF46E019048702003AB73C /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				C3CF46CF19048702003AB73C /* Default-Landscape~ipad.png in Resources */,
+				C33F4BEF190C3B60005EF6E8 /* 4F敌重装骑兵(去底).png in Resources */,
+				C33F4BE0190C3B60005EF6E8 /* 72敌武将(去底).png in Resources */,
+				C33F4BC2190C3B60005EF6E8 /* B6我方(去底).png in Resources */,
 				C323672C1906244100E53297 /* lana_icon.gif in Resources */,
+				C33F4BAB190C3B60005EF6E8 /* 6A敌武将(去底).png in Resources */,
 				C323672F1906244100E53297 /* keith_icon.gif in Resources */,
+				C33F4BC4190C3B60005EF6E8 /* AC我方(去底).png in Resources */,
+				C33F4BCF190C3B60005EF6E8 /* 40芙蕾娅(去底).png in Resources */,
+				C33F4BB1190C3B60005EF6E8 /* DD我方(去底).png in Resources */,
+				C33F4BEC190C3B60005EF6E8 /* 51敌暗黑卫队(去底).png in Resources */,
+				C33F4BD0190C3B60005EF6E8 /* 39僧侣(去底).png in Resources */,
+				C33F4BE1190C3B60005EF6E8 /* 71敌武将(去底).png in Resources */,
 				C323673B1906593100E53297 /* KnightsErrant.mp3 in Resources */,
+				C33F4BB5190C3B60005EF6E8 /* CE我方(去底).png in Resources */,
+				C33F4BEE190C3B60005EF6E8 /* 5A魔巨海兽(去底).png in Resources */,
+				C33F4BB3190C3B60005EF6E8 /* D6我方(去底).png in Resources */,
+				C33F4BED190C3B60005EF6E8 /* 50敌皇家骑兵(去底).png in Resources */,
+				C33F4BE2190C3B60005EF6E8 /* 69敌武将(去底).png in Resources */,
 				C3CF46E419048702003AB73C /* Icon-Small.png in Resources */,
+				C33F4BDA190C3B60005EF6E8 /* 7E敌武将(去底).png in Resources */,
+				C33F4BA5190C3B60005EF6E8 /* 艾尔文_重骑兵.png in Resources */,
+				C33F4BD3190C3B60005EF6E8 /* 35重装骑兵(去底).png in Resources */,
+				C33F4BE5190C3B60005EF6E8 /* 62敌武将(去底).png in Resources */,
 				C3CF46E219048702003AB73C /* Icon-Small-50.png in Resources */,
+				C33F4BAA190C3B60005EF6E8 /* 6B敌武将(去底).png in Resources */,
 				C32367321906244100E53297 /* scott_icon.gif in Resources */,
 				C3CF48CB19048707003AB73C /* LICENSE_Kazmath.txt in Resources */,
+				C33F4BEA190C3B60005EF6E8 /* 53敌枪兵(去底).png in Resources */,
+				C33F4BB7190C3B60005EF6E8 /* C8我方(去底).png in Resources */,
+				C33F4BF3190C3B60005EF6E8 /* 4B敌暗黑精灵(去底).png in Resources */,
+				C33F4BF4190C3B60005EF6E8 /* 4A敌蛮族(去底).png in Resources */,
+				C33F4BCA190C3B60005EF6E8 /* 91敌武将(去底).png in Resources */,
+				C33F4BA9190C3B60005EF6E8 /* 6D敌武将(去底).png in Resources */,
+				C33F4BD6190C3B60005EF6E8 /* 32斗士(去底).png in Resources */,
 				C3CF46D619048702003AB73C /* Icon-72.png in Resources */,
+				C33F4BB4190C3B60005EF6E8 /* CF我方(去底).png in Resources */,
+				C33F4BFA190C3B60005EF6E8 /* 3C狮鹫(去底).png in Resources */,
+				C33F4BAD190C3B60005EF6E8 /* 57魔石像鬼(去底).png in Resources */,
+				C33F4BDC190C3B60005EF6E8 /* 7A敌武将(去底).png in Resources */,
+				C33F4BF5190C3B60005EF6E8 /* 3E市民(去底).png in Resources */,
 				C3A07B15190493AF00C99426 /* Langrisser2.png in Resources */,
+				C3236767190A183B00E53297 /* Langrisser2Opening.mp4 in Resources */,
+				C33F4BB2190C3B60005EF6E8 /* DC我方(去底).png in Resources */,
+				C33F4BB8190C3B60005EF6E8 /* C7我方(去底).png in Resources */,
 				C32367391906435D00E53297 /* conversationNameBox.png in Resources */,
+				C33F4BE6190C3B60005EF6E8 /* 59魔骨龙(去底).png in Resources */,
 				C3CF482419048705003AB73C /* LICENSE_cocos2d.txt in Resources */,
+				C33F4BF1190C3B60005EF6E8 /* 4D敌蜥蜴人(去底).png in Resources */,
 				C3CF496A19048892003AB73C /* langrissa.png in Resources */,
+				C33F4BBF190C3B60005EF6E8 /* B9我方(去底).png in Resources */,
 				C3CF46CD19048702003AB73C /* Default-568h@2x.png in Resources */,
+				C33F4BBA190C3B60005EF6E8 /* C5我方(去底).png in Resources */,
 				C3CF46ED19048702003AB73C /* iTunesArtwork in Resources */,
+				C33F4BE3190C3B60005EF6E8 /* 66敌武将(去底).png in Resources */,
+				C33F4BD1190C3B60005EF6E8 /* 38弩车(去底).png in Resources */,
+				C33F4BFD190C47C3005EF6E8 /* battle_background_grass.png in Resources */,
 				C3CF46E819048702003AB73C /* Icon-Spotlight-iOS7.png in Resources */,
 				C3CF46DC19048702003AB73C /* Icon-76@2x.png in Resources */,
+				C33F4BCD190C3B60005EF6E8 /* 48敌重装步兵(去底).png in Resources */,
 				C32367381906435D00E53297 /* conversationBox.png in Resources */,
+				C33F4BC9190C3B60005EF6E8 /* 92敌武将(去底).png in Resources */,
+				C33F4BA8190C3B60005EF6E8 /* 6F敌武将(去底).png in Resources */,
+				C33F4BDB190C3B60005EF6E8 /* 里昂_重骑兵.png in Resources */,
 				C323673D19065C3600E53297 /* openning.mp3 in Resources */,
 				C32367341906244100E53297 /* 艾尔文_icon.gif in Resources */,
 				C3CF495019048707003AB73C /* LICENSE_Chipmunk.txt in Resources */,
+				C33F4BF7190C3B60005EF6E8 /* 3A卫兵(去底).png in Resources */,
 				C3CF46EA19048702003AB73C /* Icon-Spotlight-iOS7@2x.png in Resources */,
-				C32367331906244100E53297 /* hain_icon.gif in Resources */,
+				C33F4BDF190C3B60005EF6E8 /* 76敌武将(去底).png in Resources */,
+				C32367331906244100E53297 /* 海因_icon.gif in Resources */,
+				C33F4BC5190C3B60005EF6E8 /* A6我方(去底).png in Resources */,
 				C3CF46DA19048702003AB73C /* Icon-76.png in Resources */,
 				C3CF48B019048706003AB73C /* ChangeLog in Resources */,
+				C33F4BCB190C3B60005EF6E8 /* 82敌武将(去底).png in Resources */,
 				C32367311906244100E53297 /* shelly_icon.gif in Resources */,
+				C33F4BBB190C3B60005EF6E8 /* C4我方(去底).png in Resources */,
 				C3CF46EF19048702003AB73C /* iTunesArtwork@2x in Resources */,
+				C33F4BF9190C3B60005EF6E8 /* 7B敌武将(去底).png in Resources */,
 				C32367301906244100E53297 /* aaron_icon.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1848,6 +2245,7 @@
 				C3CF470E19048702003AB73C /* CCAnimation.m in Sources */,
 				C3CF48B719048707003AB73C /* mat3.c in Sources */,
 				C3CF47C319048704003AB73C /* CCTiledMap.m in Sources */,
+				C33F4B48190B2C16005EF6E8 /* HelloWorldScene.m in Sources */,
 				C3CF488819048706003AB73C /* CCControl.m in Sources */,
 				C3CF480A19048705003AB73C /* CCVertex.m in Sources */,
 				C3CF484619048705003AB73C /* ALBuffer.m in Sources */,
@@ -1869,7 +2267,10 @@
 				C3CF470719048702003AB73C /* CCActionProgressTimer.m in Sources */,
 				C3CF48BD19048707003AB73C /* plane.c in Sources */,
 				C3CF484019048705003AB73C /* OALSimpleAudio.m in Sources */,
+				C33F4B44190B2B19005EF6E8 /* MathUtil.m in Sources */,
+				C33F4B3E190B2B03005EF6E8 /* Character.m in Sources */,
 				C3CF473219048703003AB73C /* CCGLProgram.m in Sources */,
+				C33F4B4B190B2C3D005EF6E8 /* BattleScene.m in Sources */,
 				C3CF495419048708003AB73C /* main.m in Sources */,
 				C3CF486719048706003AB73C /* OALAudioSession.m in Sources */,
 				C3CF48DE19048707003AB73C /* CCBLocalizationManager.m in Sources */,
@@ -1877,7 +2278,6 @@
 				C3CF48C719048707003AB73C /* vec3.c in Sources */,
 				C3CF474A19048703003AB73C /* CCLayoutBox.m in Sources */,
 				C3CF474719048703003AB73C /* CCLayout.m in Sources */,
-				C323671019049DF600E53297 /* Character.m in Sources */,
 				C3CF486A19048706003AB73C /* OALSuspendHandler.m in Sources */,
 				C3CF48C919048707003AB73C /* vec4.c in Sources */,
 				C3CF47DB19048704003AB73C /* CCDirectorIOS.m in Sources */,
@@ -1895,7 +2295,6 @@
 				C3CF47A119048704003AB73C /* ccShaders.m in Sources */,
 				C3CF48B519048706003AB73C /* matrix.c in Sources */,
 				C3CF47C719048704003AB73C /* CCTiledMapLayer.m in Sources */,
-				C3CF495B19048708003AB73C /* HelloWorldScene.m in Sources */,
 				C3CF48BB19048707003AB73C /* neon_matrix_impl.c in Sources */,
 				C3CF474019048703003AB73C /* CCLabelTTF.m in Sources */,
 				C3CF47F519048705003AB73C /* NSEvent+CC.m in Sources */,
@@ -1905,7 +2304,6 @@
 				C3CF475919048703003AB73C /* CCParallaxNode.m in Sources */,
 				C3CF48C119048707003AB73C /* ray2.c in Sources */,
 				C3CF483D19048705003AB73C /* OALAudioTracks.m in Sources */,
-				C32367161904D01500E53297 /* MathUtil.m in Sources */,
 				C3CF483A19048705003AB73C /* OALAudioTrackNotifications.m in Sources */,
 				C3CF48BF19048707003AB73C /* quaternion.c in Sources */,
 				C3CF477319048704003AB73C /* CCPhysicsNode.m in Sources */,
@@ -1917,8 +2315,8 @@
 				C3CF481019048705003AB73C /* NSAttributedString+CCAdditions.m in Sources */,
 				C3CF48D219048707003AB73C /* CCBKeyframe.m in Sources */,
 				C3CF488C19048706003AB73C /* CCControlTextureFactory.m in Sources */,
-				C32367131904BBAD00E53297 /* gameConstants.m in Sources */,
 				C3CF471119048702003AB73C /* CCAnimationCache.m in Sources */,
+				C33F4B43190B2B19005EF6E8 /* gameConstants.m in Sources */,
 				C3CF489519048706003AB73C /* CCTableView.m in Sources */,
 				C3CF495819048708003AB73C /* AppDelegate.m in Sources */,
 				C3CF472819048703003AB73C /* CCDrawingPrimitives.m in Sources */,
@@ -2085,12 +2483,14 @@
 					"\"$(SRCROOT)/$(PROJECT_NAME)/Libraries/Chipmunk/objectivec/include\"",
 				);
 				INFOPLIST_FILE = emblemKnight/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2109,12 +2509,14 @@
 					"\"$(SRCROOT)/$(PROJECT_NAME)/Libraries/Chipmunk/objectivec/include\"",
 				);
 				INFOPLIST_FILE = emblemKnight/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

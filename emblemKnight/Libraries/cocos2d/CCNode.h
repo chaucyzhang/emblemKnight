@@ -703,5 +703,7 @@ A common user pattern in building a Cocos2d game is to subclass CCNode, add it t
  */
 -(BOOL) doesOpacityModifyRGB;
 
+-(void)forceSetInActiveScene;
+
 @end
 
