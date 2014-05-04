@@ -266,4 +266,44 @@ static GameManager *globalInstance = nil;
 }
 
 
+-(void)calculateAllianceLife:(int*)allianceLife andEnemyLife:(int*)enemyLife byAllianceObject:(CharacterObject *)allianceObject andEnemyObject:(CharacterObject *)enemyObject
+{
+    int allianceAT = [allianceObject.at intValue];
+    int enemyAT = [enemyObject.at intValue];
+    int allianceDF = [allianceObject.df intValue];
+    int enemyDF = [enemyObject.df intValue];
+    int randomPoint = arc4random()%2;
+    
+    int allianceLifeLeft =enemyAT- allianceDF;
+    int enemyLifeLeft = allianceAT - enemyDF;
+    if (allianceLifeLeft<0) {
+        allianceLifeLeft =0;
+    }
+    if (enemyLifeLeft<0) {
+        enemyLifeLeft =0;
+    }
+    
+    int allianceLifeDown = allianceLifeLeft+randomPoint;
+    if (allianceLifeDown<0) {
+        allianceLifeDown=0;
+    }
+    
+    *allianceLife = *allianceLife - allianceLifeDown;
+    randomPoint = arc4random()%2;
+    int enemyLifeDown = enemyLifeLeft+randomPoint;
+    if (enemyLifeDown<0) {
+        enemyLifeDown=0;
+    }
+    *enemyLife = *enemyLife - enemyLifeDown;
+    
+    if (*allianceLife<0) {
+        *allianceLife=0;
+    }
+    if (*enemyLife<0) {
+        *enemyLife=0;
+    }
+    
+}
+
+
 @end

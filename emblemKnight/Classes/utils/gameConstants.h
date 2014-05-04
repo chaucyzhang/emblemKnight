@@ -6,6 +6,16 @@
 //  Copyright (c) 2014 Administrator. All rights reserved.
 //
 
+/*-------------title screen related -------------*/
+typedef enum {
+    screenTypePressStartScreen,
+    screenTypeMenu,
+    screenTypeOptions,
+    screenTypeLoadGame
+
+}screenType;
+
+
 //------------sprite related ----------//
 
 #define spriteWidth 25.6

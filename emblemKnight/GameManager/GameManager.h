@@ -34,4 +34,8 @@
 -(CharacterObject*)getCharacterObjectByID:(NSString*)characterID;
 -(CharacterObject*)getCharacterObjectByName:(NSString*)characterName;
 
+
+#pragma mark - life calculation related algorithms
+-(void)calculateAllianceLife:(int*)allianceLife andEnemyLife:(int*)enemyLife byAllianceObject:(CharacterObject *)allianceObject andEnemyObject:(CharacterObject *)enemyObject;
+
 @end

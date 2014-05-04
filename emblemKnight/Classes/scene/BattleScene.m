@@ -55,9 +55,10 @@
 {
   self.userInteractionEnabled = NO;
   [self loadBG];
-  [self loadAvatarsAndTexts];
   [self loadArmy];
   [self setLifeDatas];
+  [self loadAvatarsAndTexts];
+
   [self runBattbleScript];
   [self runLifeCalculationScript];
  // [self performSelector:@selector(sendBattleSceneEndNotification) withObject:nil afterDelay:4 ];
@@ -126,7 +127,11 @@
 
 -(void)loadAllianceProperties
 {
-  NSString *atString =@"25 + 0";
+    int at=[_allianceCommander.characterObject.at intValue];
+    int df=[_allianceCommander.characterObject.df intValue];
+    
+  NSString *atString =[NSString stringWithFormat:@"%d + 0",at];
+  NSString *dfString =[NSString stringWithFormat:@"%d + 0",df];
   UIFont *commonFont = [UIFont fontWithName:@"HelveticaNeue-Medium" size:18.0];
   CGSize size = [atString sizeWithFont:commonFont];
   CCLabelTTF *atlabel = [CCLabelTTF labelWithString:atString fontName:@"HelveticaNeue-Medium" fontSize:18.0f dimensions:size];
@@ -135,7 +140,7 @@
   [atlabel setVerticalAlignment:CCTextAlignmentCenter];
   [atlabel setHorizontalAlignment:CCTextAlignmentCenter];
   [mBG addChild:atlabel];
-  NSString *dfString =@"17 + 0";
+  
  
   size = [dfString sizeWithFont:commonFont];
   
@@ -173,7 +178,11 @@
 
 -(void)loadEnemyProperties
 {
-  NSString *atString =@"37 + 0";
+    int at=[_enemyCommander.characterObject.at intValue];
+    int df=[_enemyCommander.characterObject.df intValue];
+    
+    NSString *atString =[NSString stringWithFormat:@"%d + 0",at];
+    NSString *dfString =[NSString stringWithFormat:@"%d + 0",df];
   UIFont *commonFont = [UIFont fontWithName:@"HelveticaNeue-Medium" size:18.0];
   CGSize size = [atString sizeWithFont:commonFont];
   CCLabelTTF *atlabel = [CCLabelTTF labelWithString:atString fontName:@"HelveticaNeue-Medium" fontSize:18.0f dimensions:size];
@@ -182,7 +191,6 @@
   [atlabel setVerticalAlignment:CCTextAlignmentCenter];
   [atlabel setHorizontalAlignment:CCTextAlignmentCenter];
   [mBG addChild:atlabel];
-  NSString *dfString =@"27 + 0";
   
   size = [dfString sizeWithFont:commonFont];
   
@@ -244,7 +252,20 @@
 -(void)runLifeCalculationScript
 {
   int oldAllianceLife = _allianceLifeData;
-  _allianceLifeData=3;
+    int oldEnemyLife = _enemyLifeData;
+    int allianceLife =_allianceLifeData;
+    int enemyLife = _enemyLifeData;
+    
+    [[GameManager manager] calculateAllianceLife:&allianceLife andEnemyLife:&enemyLife byAllianceObject:_allianceCommander.characterObject andEnemyObject:_enemyCommander.characterObject];
+    
+    _allianceLifeData = allianceLife;
+    _enemyLifeData = enemyLife;
+    
+//  _allianceLifeData=3;
+//  _enemyLifeData=0;
+    
+    
+    
   NSMutableArray *lifeDownArray =[NSMutableArray array];
   [lifeDownArray addObject:[CCActionDelay actionWithDuration:0.5]];
   for (int i=oldAllianceLife; i>=_allianceLifeData; i--) {
@@ -260,8 +281,7 @@
   CCActionSequence *updateSequence = [CCActionSequence actionWithArray:lifeDownArray];
   [_allianceLife runAction:updateSequence];
   
-  int oldEnemyLife = _enemyLifeData;
-  _enemyLifeData=0;
+ 
   
  
   
@@ -286,7 +306,7 @@
   
  
   [self performSelector:@selector(runEnemyDownAnimation) withObject:nil afterDelay:1.25];
-
+  [self performSelector:@selector(runAllianceDownAnimation) withObject:nil afterDelay:1.25];
 }
 
 
@@ -317,6 +337,31 @@
   }
 
 
+}
+
+-(void)runAllianceDownAnimation
+{
+    if(_allianceLifeData==0){
+        [_allianceCommander stopAllActions];
+        
+        CCSpriteFrame *enemyCommanderDownFrame = [_allianceCommander getBattleDieSpriteWithName:_allianceCommander.name andTextPointInSheet:CGPointMake(5, 1)];
+        CGPoint previousEnemyPoint = _allianceCommander.position;
+        previousEnemyPoint=ccp((int)previousEnemyPoint.x, (int)previousEnemyPoint.y);
+        [_allianceCommander setSpriteFrame:enemyCommanderDownFrame];
+        ccBezierConfig curve;
+        
+        curve.controlPoint_1=ccp(previousEnemyPoint.x, previousEnemyPoint.y+100);
+        curve.controlPoint_2=ccp(previousEnemyPoint.x-100, previousEnemyPoint.y+100);
+        curve.endPosition=ccp(previousEnemyPoint.x-100, previousEnemyPoint.y-24);
+        id bezierCurveAction = [CCActionBezierTo actionWithDuration:0.6 bezier:curve];
+        
+        CCActionFadeOut *fadeOut = [CCActionFadeOut actionWithDuration:1.0];
+        CCActionSequence *sequence = [CCActionSequence actionWithArray:@[bezierCurveAction,fadeOut]];
+        [_allianceCommander runAction:sequence];
+      
+    }
+    
+    
 }
 
 -(void)loadAllianceMoveScript
@@ -379,8 +424,8 @@
         [elwin setName:self.allianceCommanderName];
         [elwin setHp:[NSNumber numberWithInteger:10]];
         [elwin setMp:[NSNumber numberWithInteger:0]];
-        [elwin setAt:[NSNumber numberWithInteger:25]];
-        [elwin setDf:[NSNumber numberWithInteger:17]];
+        [elwin setAt:[NSNumber numberWithInteger:34]];
+        [elwin setDf:[NSNumber numberWithInteger:25]];
         [[GameManager manager] saveContext];
     }
 
@@ -397,12 +442,12 @@
     
     leon=[[GameManager manager] getCharacterObjectByName:self.enemyCommanderName];
     if (leon==nil) {
-    CharacterObject *leon = [[GameManager manager] insertCharacterIntoDB];
+    leon = [[GameManager manager] insertCharacterIntoDB];
     [leon setName:self.enemyCommanderName];
     [leon setHp:[NSNumber numberWithInteger:10]];
     [leon setMp:[NSNumber numberWithInteger:0]];
-    [leon setAt:[NSNumber numberWithInteger:32]];
-    [leon setDf:[NSNumber numberWithInteger:24]];
+    [leon setAt:[NSNumber numberWithInteger:34]];
+    [leon setDf:[NSNumber numberWithInteger:25]];
     [[GameManager manager] saveContext];
     }
      [_enemyCommander setCharacterObject:leon];
