@@ -50,6 +50,8 @@
   BOOL _isTryingToMoveCharacter;
   BOOL _isScrollingMap;
   BOOL _gamePaused;
+    
+    CharacterBattleMenu *_battleMenu;
 }
 
 
@@ -645,6 +647,10 @@
         CGPoint positionInSheet = [[_characterPositionInSheetMap valueForKey:character.name] CGPointValue];
         [character addMoveAnimationWithTextPointInSheet:positionInSheet];
         _activeCharacter=character;
+          CharacterBattleMenu *battleMenu = [[CharacterBattleMenu alloc] initWithCharacter:character.characterObject delegateNode:self andMapNode:mBG];
+          [battleMenu popBattleMenuForPoint:character.position];
+          _battleMenu=battleMenu;
+          
         break;
       }
     }
@@ -700,6 +706,7 @@
     
 //  CCActionMoveTo *actionMove = [CCActionMoveTo actionWithDuration:duration position:touchLoc];
 //  [_activeCharacter runAction:actionMove];
+    [_battleMenu dismissBattleMenu];
   [_activeCharacter performSelector:@selector(stopMoveAnimation) withObject:nil afterDelay:duration];
   _activeCharacter = nil;
   }
@@ -717,6 +724,7 @@
 -(void)battleSceneEndded:(NSNotification *)notification
 {
   [[CCDirector sharedDirector] popSceneWithTransition:[CCTransition transitionFadeWithDuration:0.5 ]];
+  
 }
 
 -(void)loadBattleSceneWithAllianceName:(NSString *)allianceCommanderName andEnemyName:(NSString *)enemyCommanderName

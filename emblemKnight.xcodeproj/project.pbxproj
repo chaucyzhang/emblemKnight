@@ -11,6 +11,7 @@
 		1312AC6119136ED500A47327 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1312AC6019136ED500A47327 /* GameManager.m */; };
 		1312AC641913746800A47327 /* CharacterObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1312AC631913746800A47327 /* CharacterObject.m */; };
 		1312AC6619137E0500A47327 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1312AC6519137E0500A47327 /* CoreData.framework */; };
+		13AD9EAE191F353300827A12 /* CharacterBattleMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AD9EAD191F353300827A12 /* CharacterBattleMenu.m */; };
 		C32367191905D4AD00E53297 /* Stage1.png in Resources */ = {isa = PBXBuildFile; fileRef = C32367181905D4AD00E53297 /* Stage1.png */; };
 		C323672A1906244100E53297 /* 里昂_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C323671F1906244100E53297 /* 里昂_icon.gif */; };
 		C323672B1906244100E53297 /* jessica_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = C32367201906244100E53297 /* jessica_icon.gif */; };
@@ -348,6 +349,8 @@
 		1312AC621913746800A47327 /* CharacterObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CharacterObject.h; path = DataObjects/CharacterObject.h; sourceTree = "<group>"; };
 		1312AC631913746800A47327 /* CharacterObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CharacterObject.m; path = DataObjects/CharacterObject.m; sourceTree = "<group>"; };
 		1312AC6519137E0500A47327 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		13AD9EAC191F353300827A12 /* CharacterBattleMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CharacterBattleMenu.h; path = menueControllers/CharacterBattleMenu.h; sourceTree = "<group>"; };
+		13AD9EAD191F353300827A12 /* CharacterBattleMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CharacterBattleMenu.m; path = menueControllers/CharacterBattleMenu.m; sourceTree = "<group>"; };
 		C32367181905D4AD00E53297 /* Stage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stage1.png; path = Resources/StageMaps/Stage1.png; sourceTree = "<group>"; };
 		C323671F1906244100E53297 /* 里昂_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "里昂_icon.gif"; path = "Resources/AvatarIcons/里昂_icon.gif"; sourceTree = "<group>"; };
 		C32367201906244100E53297 /* jessica_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = jessica_icon.gif; path = Resources/AvatarIcons/jessica_icon.gif; sourceTree = "<group>"; };
@@ -942,6 +945,15 @@
 				1312AC6019136ED500A47327 /* GameManager.m */,
 			);
 			name = GameManager;
+			sourceTree = "<group>";
+		};
+		13AD9EAB191F340800827A12 /* menuControllers */ = {
+			isa = PBXGroup;
+			children = (
+				13AD9EAC191F353300827A12 /* CharacterBattleMenu.h */,
+				13AD9EAD191F353300827A12 /* CharacterBattleMenu.m */,
+			);
+			name = menuControllers;
 			sourceTree = "<group>";
 		};
 		C32367171905D49400E53297 /* StageMaps */ = {
@@ -1996,6 +2008,7 @@
 		C3CF495519048708003AB73C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				13AD9EAB191F340800827A12 /* menuControllers */,
 				1312AC5E19136E6100A47327 /* GameManager */,
 				1312AC5D19136E1800A47327 /* DataObjects */,
 				C33F4B45190B2B2A005EF6E8 /* scene */,
@@ -2375,6 +2388,7 @@
 				C3CF47D419048704003AB73C /* cocos2d.m in Sources */,
 				C3CF485C19048706003AB73C /* ALSource.m in Sources */,
 				C3CF476419048703003AB73C /* CCParticleSystem.m in Sources */,
+				13AD9EAE191F353300827A12 /* CharacterBattleMenu.m in Sources */,
 				C3CF478919048704003AB73C /* CCScene.m in Sources */,
 				C3CF47B719048704003AB73C /* CCTexture.m in Sources */,
 				C3CF484919048705003AB73C /* ALCaptureDevice.m in Sources */,

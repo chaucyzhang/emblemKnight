@@ -245,7 +245,7 @@
   [self loadAllianceMoveScript];
   [self loadEnemyMoveScript];
   
-  int accessoryAnimationDuration = 4.0;
+  int accessoryAnimationDuration = 3.0;
   [self performSelector:@selector(sendBattleSceneEndNotification) withObject:nil afterDelay:defaultBattleSceneAnimationDuration+accessoryAnimationDuration];
 }
 
@@ -268,18 +268,22 @@
     
   NSMutableArray *lifeDownArray =[NSMutableArray array];
   [lifeDownArray addObject:[CCActionDelay actionWithDuration:0.5]];
+    [lifeDownArray addObject:
+     [CCActionCallBlock actionWithBlock:^{
+        [self runAllianceDownAnimation];
+    }]];
   for (int i=oldAllianceLife; i>=_allianceLifeData; i--) {
     //add life numbers as string into array
 //    [lifeDownArray addObject:[NSString stringWithFormat:@"%d",i]];
-    [lifeDownArray addObject:[CCActionDelay actionWithDuration:0.03]];
+    [lifeDownArray addObject:[CCActionDelay actionWithDuration:0.02]];
     [lifeDownArray addObject:
      [CCActionCallBlock actionWithBlock:^{
       [_allianceLife setString:[NSString stringWithFormat:@"%d",i]];
     }]];
   }
-  
+
   CCActionSequence *updateSequence = [CCActionSequence actionWithArray:lifeDownArray];
-  [_allianceLife runAction:updateSequence];
+  [self runAction:updateSequence];
   
  
   
@@ -287,10 +291,14 @@
   
   NSMutableArray *enemylifeDownArray =[NSMutableArray array];
   [enemylifeDownArray addObject:[CCActionDelay actionWithDuration:0.5]];
+    [enemylifeDownArray addObject:
+     [CCActionCallBlock actionWithBlock:^{
+        [self runEnemyDownAnimation];
+    }]];
   for (int i=oldEnemyLife; i>=_enemyLifeData; i--) {
     //add life numbers as string into array
     //    [lifeDownArray addObject:[NSString stringWithFormat:@"%d",i]];
-    [enemylifeDownArray addObject:[CCActionDelay actionWithDuration:0.03]];
+    [enemylifeDownArray addObject:[CCActionDelay actionWithDuration:0.02]];
     [enemylifeDownArray addObject:
      [CCActionCallBlock actionWithBlock:^{
       [_enemyLife setString:[NSString stringWithFormat:@"%d",i]];
@@ -305,8 +313,8 @@
   [self runAction:updateEnemySequence];
   
  
-  [self performSelector:@selector(runEnemyDownAnimation) withObject:nil afterDelay:1.25];
-  [self performSelector:@selector(runAllianceDownAnimation) withObject:nil afterDelay:1.25];
+//  [self performSelector:@selector(runEnemyDownAnimation) withObject:nil afterDelay:1.25];
+//  [self performSelector:@selector(runAllianceDownAnimation) withObject:nil afterDelay:1.25];
 }
 
 

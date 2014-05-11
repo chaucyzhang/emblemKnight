@@ -131,35 +131,65 @@
 
 -(void)loadGameMenu
 {
+    
     _currentScreenType=screenTypeMenu;
-
-    CCLabelTTF *newGamelabel = [CCLabelTTF labelWithString:@"Start a new game" fontName:@"Zapfino" fontSize:10.0f];
-    newGamelabel.positionType = CCPositionTypeNormalized;
-    newGamelabel.color = [CCColor whiteColor];
-    newGamelabel.position = ccp(0.5f, 0.3f);
-    [newGamelabel setVerticalAlignment:CCVerticalTextAlignmentCenter];
-   
+    CCLayoutBox *layoutBox = [CCLayoutBox  node];
+    layoutBox.positionType=CCPositionTypeNormalized;
+    layoutBox.position=ccp(0.5f, 0.2f);
+    CCButton *startButton = [CCButton buttonWithTitle:@"Start New Game"];
+    [startButton setTarget:self selector:@selector(loadNewGame)];
     
-    CCLabelTTF *loadGamelabel = [CCLabelTTF labelWithString:@"Load game" fontName:@"Zapfino" fontSize:10.0f];
-    loadGamelabel.positionType = CCPositionTypeNormalized;
-    loadGamelabel.color = [CCColor whiteColor];
-    loadGamelabel.position = ccp(0.5f, 0.2f);
-    [loadGamelabel setVerticalAlignment:CCVerticalTextAlignmentCenter];
     
-    CCLabelTTF *optionslabel = [CCLabelTTF labelWithString:@"Option" fontName:@"Zapfino" fontSize:10.0f];
-    optionslabel.positionType = CCPositionTypeNormalized;
-    optionslabel.color = [CCColor whiteColor];
-    optionslabel.position = ccp(0.5f, 0.1f);
-    [optionslabel setVerticalAlignment:CCVerticalTextAlignmentCenter];
+    CCButton *loadGameButton = [CCButton buttonWithTitle:@"Load Game"];
+    //  [loadGameButton setTarget:self selector:nil];
     
-    [self addChild:newGamelabel];
-    [self addChild:loadGamelabel];
-    [self addChild:optionslabel];
     
-    _startNewGameLabel=newGamelabel;
-    _loadGameLabel=loadGamelabel;
-    _optionsLabel=optionslabel;
     
+    
+    CCButton *optionsButton = [CCButton buttonWithTitle:@"Options"];
+    //  [optionsButton setTarget:self selector:nil];
+    
+    
+    
+    layoutBox.anchorPoint = ccp(0.5f, 0.5f);
+    layoutBox.direction = CCLayoutBoxDirectionVertical;
+    layoutBox.spacing = 5.0f;
+    
+    
+    [layoutBox addChild:optionsButton];
+    [layoutBox addChild:loadGameButton];
+    [layoutBox addChild:startButton];
+    [self addChild:layoutBox];
+    
+    
+    /*
+     CCLabelTTF *newGamelabel = [CCLabelTTF labelWithString:@"Start a new game" fontName:@"Zapfino" fontSize:10.0f];
+     newGamelabel.positionType = CCPositionTypeNormalized;
+     newGamelabel.color = [CCColor whiteColor];
+     newGamelabel.position = ccp(0.5f, 0.3f);
+     [newGamelabel setVerticalAlignment:CCVerticalTextAlignmentCenter];
+     
+     
+     CCLabelTTF *loadGamelabel = [CCLabelTTF labelWithString:@"Load game" fontName:@"Zapfino" fontSize:10.0f];
+     loadGamelabel.positionType = CCPositionTypeNormalized;
+     loadGamelabel.color = [CCColor whiteColor];
+     loadGamelabel.position = ccp(0.5f, 0.2f);
+     [loadGamelabel setVerticalAlignment:CCVerticalTextAlignmentCenter];
+     
+     CCLabelTTF *optionslabel = [CCLabelTTF labelWithString:@"Option" fontName:@"Zapfino" fontSize:10.0f];
+     optionslabel.positionType = CCPositionTypeNormalized;
+     optionslabel.color = [CCColor whiteColor];
+     optionslabel.position = ccp(0.5f, 0.1f);
+     [optionslabel setVerticalAlignment:CCVerticalTextAlignmentCenter];
+     
+     [self addChild:newGamelabel];
+     [self addChild:loadGamelabel];
+     [self addChild:optionslabel];
+     
+     _startNewGameLabel=newGamelabel;
+     _loadGameLabel=loadGamelabel;
+     _optionsLabel=optionslabel;
+     */
     
 }
 
@@ -231,7 +261,7 @@
 
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-   
+    
 }
 
 -(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
